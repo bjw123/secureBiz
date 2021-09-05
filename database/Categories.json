@@ -1,0 +1,749 @@
+[{
+        "__comment__": "Maturity Logic applied to Application Control base question responses",
+        "QuestionCategory": "AppControl",
+        "CodeName": "AppControlML",
+        "Title": "Application Control Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "app_control_ml",
+        "Desc": "The Maturity Logic applied to Application Control base question responses",
+        "DetailedDesc": "Only base level Application Control questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "OR",
+                "Rules": [
+                    "Q(1).Answer === 'c'",
+                    "Q(2).Answer === 'c'"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === 'a'"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [{
+                        "Operator": "OR",
+                        "Rules": [
+                            "Q(1).Answer === 'a'",
+                            "Q(1).Answer === 'b'"
+                        ]
+                    },
+                    "Q(2).Answer === 'a'"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    {
+                        "Operator": "OR",
+                        "Rules": [
+                            "Q(2).Answer === 'a'",
+                            "Q(2).Answer === 'b'"
+                        ]
+                    }
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'b'",
+                    "Q(2).Answer === 'b'",
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'b'",
+                    "Q(2).Answer === 'b'",
+                    "Q(3).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to Patch Applications base question responses",
+        "QuestionCategory": "PatchApp",
+        "CodeName": "PatchAppML",
+        "Title": "Patch Application Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "patch_app_ml",
+        "Desc": "The Maturity Logic applied to Patch Application base question responses",
+        "DetailedDesc": "Only base level Patch Application questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "OR",
+                "Rules": [
+                    "Q(1).Answer === 'd'",
+                    "Q(2).Answer === false"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'c'",
+                    "Q(2).Answer === true"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'b'",
+                    "Q(2).Answer === true"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to Configuring Microsoft Office macro settings base question responses",
+        "QuestionCategory": "OfficeMacro",
+        "CodeName": "OfficeMacroML",
+        "Title": "Office Macro Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "office_macro_ml",
+        "Desc": "The Maturity Logic applied to Configuring Microsoft Office macro settings base question responses",
+        "DetailedDesc": "Only base level MS Office macro settings questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "OR",
+                "Rules": [
+                    "Q(1).Answer === 'd'",
+                    "Q(2).Answer === false"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'c'",
+                    "Q(2).Answer === true"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [{
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(1).Answer", [
+                                "a",
+                                "b",
+                                "c"
+                            ]
+                        ]
+                    },
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'b'",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to User Application Hardening base question responses",
+        "QuestionCategory": "Hardening",
+        "CodeName": "HardeningML",
+        "Title": "User Application Hardening Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "hardening_ml",
+        "Desc": "The Maturity Logic applied to User Application Hardening base question responses",
+        "DetailedDesc": "Only base level User Application Hardening questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "",
+                "Rules": [
+                    "Q(1).Answer === false"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === false"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to Restricting Administrative Privileges base question responses",
+        "QuestionCategory": "RestrictAdm",
+        "CodeName": "RestrictAdmML",
+        "Title": "Restricting Administrative Privileges Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "restrict_admin_ml",
+        "Desc": "The Maturity Logic applied to Restricting Administrative Privileges base question responses",
+        "DetailedDesc": "Only base level Restricting Administrative Privileges questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "OR",
+                "Rules": [
+                    "Q(1).Answer === false",
+                    "Q(2).Answer === false"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to Patching Operating Systems base question responses",
+        "QuestionCategory": "PatchOS",
+        "CodeName": "PatchOSML",
+        "Title": "Patching Operating Systems Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "patch_os_ml",
+        "Desc": "The Maturity Logic applied to Patching Operating Systems base question responses",
+        "DetailedDesc": "Only base level Patching Operating Systems questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "OR",
+                "Rules": [
+                    "Q(1).Answer === 'd'",
+                    "Q(2).Answer === false"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'c'",
+                    "Q(2).Answer === true"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'b'",
+                    "Q(2).Answer === true"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === true",
+                    "Q(3).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to Multi-factor Authentication base question responses",
+        "QuestionCategory": "MFA",
+        "CodeName": "MFAML",
+        "Title": "Multi-factor Authentication Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "mfa_ml",
+        "Desc": "The Maturity Logic applied to Multi-factor Authentication base question responses",
+        "DetailedDesc": "Only base level Multi-factor Authentication questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "",
+                "Rules": [
+                    "Q(1).Answer === false"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    {
+                        "Operator": "ANYIN",
+                        "Rules": [
+                            "Q(2).SelectedOptions", [
+                                "g",
+                                "h",
+                                "i",
+                                "j"
+                            ]
+                        ]
+                    }
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    {
+                        "Operator": "OR",
+                        "Rules": [{
+                                "Operator": "ANYIN",
+                                "Rules": [
+                                    "Q(2).SelectedOptions", [
+                                        "f"
+                                    ]
+                                ]
+                            },
+                            {
+                                "Operator": "ALLIN",
+                                "Rules": [
+                                    "Q(2).SelectedOptions", [
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d",
+                                        "e"
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    "Q(3).Answer === false"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    {
+                        "Operator": "ANYIN",
+                        "Rules": [
+                            "Q(2).SelectedOptions", [
+                                "f"
+                            ]
+                        ]
+                    },
+                    "Q(3).Answer === true"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    {
+                        "Operator": "ALLIN",
+                        "Rules": [
+                            "Q(2).SelectedOptions", [
+                                "a",
+                                "b",
+                                "c",
+                                "d",
+                                "e"
+                            ]
+                        ]
+                    },
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === true",
+                    {
+                        "Operator": "ALLIN",
+                        "Rules": [
+                            "Q(2).SelectedOptions", [
+                                "a",
+                                "b",
+                                "c",
+                                "d",
+                                "e"
+                            ]
+                        ]
+                    },
+                    "Q(3).Answer === true",
+                    "Q(4).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    },
+    {
+        "__comment__": "Maturity Logic applied to Backups base question responses",
+        "QuestionCategory": "Backups",
+        "CodeName": "BackupsML",
+        "Title": "Daily Backups Maturity Logic",
+        "IsVisible": true,
+        "Tooltip": "",
+        "Slug": "backups_ml",
+        "Desc": "The Maturity Logic applied to Backups base question responses",
+        "DetailedDesc": "Only base level Backups questions are considered when calculating the Maturity level in this domain of the Essential Eight",
+        "Expressions": [{
+                "Operator": "OR",
+                "Rules": [
+                    "Q(1).Answer === 'd'",
+                    "Q(2).Answer === 'c'",
+                    "Q(3).Answer === 'd'"
+                ],
+                "Override": false,
+                "Level": 0
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'c'",
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(2).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(3).Answer", [
+                                "a",
+                                "b",
+                                "c"
+                            ]
+                        ]
+                    }
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [{
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(1).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(2).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    "Q(3).Answer === 'c'"
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [{
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(1).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(2).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(3).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "OR",
+                        "Rules": [
+                            "Q(4).Answer === false",
+                            "Q(5).Answer === false"
+                        ]
+                    }
+                ],
+                "Override": false,
+                "Level": 1
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'b'",
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(2).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(3).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "AND",
+                        "Rules": [
+                            "Q(4).Answer === true",
+                            "Q(5).Answer === true"
+                        ]
+                    }
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === 'b'",
+                    {
+                        "Operator": "IN",
+                        "Rules": [
+                            "Q(3).Answer", [
+                                "a",
+                                "b"
+                            ]
+                        ]
+                    },
+                    {
+                        "Operator": "AND",
+                        "Rules": [
+                            "Q(4).Answer === true",
+                            "Q(5).Answer === true"
+                        ]
+                    }
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === 'a'",
+                    "Q(3).Answer === 'b'",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === true"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === 'a'",
+                    "Q(3).Answer === 'a'",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === true",
+                    "Q(6).Answer === false"
+                ],
+                "Override": false,
+                "Level": 2
+            },
+            {
+                "Operator": "AND",
+                "Rules": [
+                    "Q(1).Answer === 'a'",
+                    "Q(2).Answer === 'a'",
+                    "Q(3).Answer === 'a'",
+                    "Q(4).Answer === true",
+                    "Q(5).Answer === true",
+                    "Q(6).Answer === true"
+                ],
+                "Override": false,
+                "Level": 3
+            }
+        ]
+    }
+]

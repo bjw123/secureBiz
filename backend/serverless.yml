@@ -1,0 +1,45 @@
+service: secure-biz-backend
+variablesResolutionMode: 20210326
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: ap-southeast-2
+  stage: ${opt:stage,'dev'}
+  memorySize: 128
+  timeout: 30
+
+  environment:
+    NODE_ENV: ${opt:stage,'dev'}
+    MONGODB_ENV: ${env:MONGODB_ENV}
+    ATLAS_DB_USER: ${env:ATLAS_DB_USER}
+    CLUSTER_NAME: ${env:CLUSTER_NAME}
+    MONGODB_DB_NAME: ${env:MONGODB_DB_NAME}
+    ATLAS_DB_PASSWORD: ${env:ATLAS_DB_PASSWORD}
+    MONGODB_SESSION_COLLECTION_NAME: ${env:MONGODB_SESSION_COLLECTION_NAME}
+    MONGODB_SESSION_SECRET: ${env:MONGODB_SESSION_SECRET}
+    TOKEN_SECRET: ${env:TOKEN_SECRET}
+    ENCRYPT_SECRET: ${env:ENCRYPT_SECRET}
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    port: 9000
+package:
+  exclude:
+    - node_modules/puppeteer/**
+    - lambda_layer/**
+    - .env
+    # - node_modules/**
+    # - venv/**

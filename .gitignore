@@ -1,0 +1,58 @@
+/express/node_modules/
+/express-lambda/node_modules/
+/express-lambda/.backend/
+/backend/node_modules/
+/backend/.serverless/
+/lambda/node_modules/
+/shelf/
+
+/express/views/PDF/debug.log
+
+# Exclude OpenAPI code generator generated code
+express/openapi/codegen
+express/openapi/codegen/*
+
+# Exclude logs
+express/error.log
+express/combined.log
+
+# Exclude backend
+backend/.env
+backend/.env.test
+backend/.env.dev
+backend/.env.prod
+express-lambda/.env
+
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+/.idea/
+
+# VS Editor
+.vs/
+/workspace.xml
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+express/.env
+
+### Documentation
+# Ignore generated doucumentation files
+.docx
+.pdf
+
+# GnuPG
+# Ignore 
+.gnupg/
+.gnupg/*

@@ -1,0 +1,80 @@
+{
+  "name": "express",
+  "version": "4.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "serverless offline start --httpPort 3001 --stage dev --skipCacheInvalidation",
+    "startall": "concurrently \"npm start\" \"cd.. && cd frontend && npm run dev\"",
+    "migrate": "node migration/db_refresh.js",
+    "openapi-gen-server": "./node_modules/.bin/openapi-generator-cli generate -g nodejs-express-server -i ./api/openapi.yaml -o ./openapi/codegen/server",
+    "standard": "./node_modules/.bin/standard",
+    "standard-fix": "./node_modules/.bin/standard --fix",
+    "deploytest": "serverless deploy --stage test",
+    "deployprod": "serverless deploy --stage prod",
+    "removetest": "serverless remove --stage test",
+    "removeprod": "serverless remove --stage prod"
+  },
+  "dependencies": {
+    "@serverless-chrome/lambda": "^1.0.0-57.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "body-parser": "^1.19.0",
+    "camelcase": "^6.2.0",
+    "chrome-aws-lambda": "^8.0.2",
+    "concurrently": "^6.0.0",
+    "cookie-parser": "~1.4.5",
+    "cors": "^2.8.5",
+    "express-openapi-validator": "^3.17.2",
+    "handlebars": "^4.7.6",
+    "js-yaml": "^3.14.1",
+    "mongo-sanitize": "^1.1.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13",
+    "ono": "^7.1.3",
+    "openapi-backend": "^3.9.1",
+    "openapi-sampler": "^1.0.0-beta.15",
+    "puppeteer-core": "^8.0.0",
+    "sanitize-html": "^2.3.2",
+    "semver": "^7.3.4",
+    "superagent": "^6.1.0",
+    "winston": "^3.3.3",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.1.18",
+    "axios": "^0.21.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "express": "~4.17.1",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "serverless-offline": "^6.9.0",
+    "standard": "^16.0.3"
+  },
+  "engines": {
+    "node": "~14.15.1",
+    "npm": "~6.14.8"
+  },
+  "standard": {
+    "ignore": [
+      "express/openapi/codegen/*",
+      "express/controllers/*",
+      "express/utils/*",
+      "express/config.js",
+      "express/expressServer.js",
+      "express/index.js",
+      "express/logger.js"
+    ]
+  }
+}

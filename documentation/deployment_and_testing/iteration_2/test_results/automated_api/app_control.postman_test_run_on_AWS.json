@@ -1,0 +1,576 @@
+{
+	"id": "b77d4b50-c612-4728-8801-83b142e610bb",
+	"name": "app_control",
+	"timestamp": "2021-05-04T19:14:39.275Z",
+	"collection_id": "f02944a3-6af8-4658-804d-b0a233299f97",
+	"folder_id": 0,
+	"environment_id": "5eb94f1c-09f4-447b-aefc-426c04ce5269",
+	"totalPass": 6,
+	"totalFail": 12,
+	"results": [
+		{
+			"id": "f5006572-b099-45b1-877b-a01733ad4de1",
+			"name": "A,A,Y(1)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 1841,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1841
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "0243dcc0-f9f6-4215-91f8-dc6e327ab970",
+			"name": "A,A,N(1)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 1341,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1341
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "32373b21-042f-4d0d-bbbc-4431caedea1b",
+			"name": "A,B,Y(1)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 557,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				557
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "0cfbedc8-a46d-4b82-b8da-5cf75764a9a1",
+			"name": "A,B,N(1)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 583,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				583
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "f7d0edac-f336-488b-8af5-c564440757d7",
+			"name": "A,C,Y(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 262,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				262
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "bd3d67c3-267d-4c14-91d7-ed6cb4f28285",
+			"name": "A,C,N(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 258,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "6183ec16-7214-4c53-9f96-0ccbdece82b8",
+			"name": "B,A,Y(1)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 572,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				572
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "cc49b58d-deb5-42ef-beb1-abf540a2643a",
+			"name": "B,A,N(1)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 568,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				568
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "76e71e7d-ca5c-42f7-bc85-b8fdb19a5072",
+			"name": "B,B,Y(3)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "75d4215c-cd59-47c7-83de-dbaee6a95d64",
+			"name": "B,B,N(2)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 248,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "9b8ed4f0-1816-47fa-aa2b-fc2bf4c20bbb",
+			"name": "B,C,Y(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 455,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				455
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "1320b1fc-be67-4212-b9f0-c87a6d0cc1c6",
+			"name": "B,C,N(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 358,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				358
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "35b1cd91-a306-4f78-995d-0474b98bd868",
+			"name": "C,A,Y(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				241
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "daa85cce-de1b-4d94-8896-3b57d338609b",
+			"name": "C,A,N(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 415,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				415
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "7a973851-5452-4eac-b277-4e22fa8a5947",
+			"name": "C,B,Y(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 255,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "46c54226-e102-4fa1-a926-d34381d933ee",
+			"name": "C,B,N(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 234,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				234
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "886644ec-387b-46c5-a361-af640842dd06",
+			"name": "C,C,Y(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 212,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				212
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "d3884c2c-903e-437a-ada7-09994cf94925",
+			"name": "C,C,N(0)",
+			"url": "https://j9xp6ms5lb.execute-api.ap-southeast-2.amazonaws.com/test//category/core-result",
+			"time": 361,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				361
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 9154,
+	"collection": {
+		"requests": [
+			{
+				"id": "f5006572-b099-45b1-877b-a01733ad4de1",
+				"method": "POST"
+			},
+			{
+				"id": "0243dcc0-f9f6-4215-91f8-dc6e327ab970",
+				"method": "POST"
+			},
+			{
+				"id": "32373b21-042f-4d0d-bbbc-4431caedea1b",
+				"method": "POST"
+			},
+			{
+				"id": "0cfbedc8-a46d-4b82-b8da-5cf75764a9a1",
+				"method": "POST"
+			},
+			{
+				"id": "f7d0edac-f336-488b-8af5-c564440757d7",
+				"method": "POST"
+			},
+			{
+				"id": "bd3d67c3-267d-4c14-91d7-ed6cb4f28285",
+				"method": "POST"
+			},
+			{
+				"id": "6183ec16-7214-4c53-9f96-0ccbdece82b8",
+				"method": "POST"
+			},
+			{
+				"id": "cc49b58d-deb5-42ef-beb1-abf540a2643a",
+				"method": "POST"
+			},
+			{
+				"id": "76e71e7d-ca5c-42f7-bc85-b8fdb19a5072",
+				"method": "POST"
+			},
+			{
+				"id": "75d4215c-cd59-47c7-83de-dbaee6a95d64",
+				"method": "POST"
+			},
+			{
+				"id": "9b8ed4f0-1816-47fa-aa2b-fc2bf4c20bbb",
+				"method": "POST"
+			},
+			{
+				"id": "1320b1fc-be67-4212-b9f0-c87a6d0cc1c6",
+				"method": "POST"
+			},
+			{
+				"id": "35b1cd91-a306-4f78-995d-0474b98bd868",
+				"method": "POST"
+			},
+			{
+				"id": "daa85cce-de1b-4d94-8896-3b57d338609b",
+				"method": "POST"
+			},
+			{
+				"id": "7a973851-5452-4eac-b277-4e22fa8a5947",
+				"method": "POST"
+			},
+			{
+				"id": "46c54226-e102-4fa1-a926-d34381d933ee",
+				"method": "POST"
+			},
+			{
+				"id": "886644ec-387b-46c5-a361-af640842dd06",
+				"method": "POST"
+			},
+			{
+				"id": "d3884c2c-903e-437a-ada7-09994cf94925",
+				"method": "POST"
+			}
+		]
+	}
+}

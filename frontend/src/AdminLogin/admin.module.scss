@@ -1,0 +1,126 @@
+@import './../global.scss';
+.homeContainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 4px;
+    max-height: 50px;
+}
+
+.navModal > div > div {
+    height: 425px;
+    width: 770px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navModal {
+    top: calc(50% - 212px);
+}
+
+.navModalTitle{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: $darkGreyText;
+}
+
+.navModalBody {
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 23px;
+    line-height:18px;
+}
+
+.navModalHeader span{
+    font-size: 45px;
+    position:absolute;
+    top:5px;
+    right:24px;
+}
+
+.formLabel {
+    font-weight: bolder;
+    color: $darkGreyText;
+    margin-bottom: 11px;
+}
+
+.formControl {
+    padding: 12px 20px;
+}
+
+.formGroup{
+    margin: 0px 0px 11px 0px;
+}
+
+.navModalFooter {
+    justify-content: flex-start !important;
+    border: none;
+    padding-left: 31px;
+}
+
+.navModalButton {
+    height: 44px;
+    background-color: $lightGreen;
+    color: #f5f8fd;
+    margin-left:0px;
+    margin-top:5px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    text-transform: full-width;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-weight: 300 !important;
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.5s ease 0s;
+}
+
+.navModalButton:hover {
+    background-color: $lightGreen;
+    opacity: 0.8;
+}
+
+.rememberMe {
+    position: relative;
+    top: -3px;
+    left: 0px;
+}
+
+.rememberMe label {
+    position: relative;
+    top: 3px;
+    left: -3px;
+}
+
+.forgotPassword {
+    position: absolute;
+    bottom: 12px;
+    left: 27px;
+    color: $lightBlue;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.loadingSpinner {
+    position:absolute;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    z-index: 1000;
+
+}
+
+@media (max-width: $mobileBreakPoint) {
+    .navModal > div > div {
+        width: 360px;
+    }
+
+    .navModalButton {
+        width: 135px;
+    }
+}

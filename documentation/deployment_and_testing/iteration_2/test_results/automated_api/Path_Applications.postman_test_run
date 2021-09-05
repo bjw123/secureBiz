@@ -1,0 +1,514 @@
+{
+	"id": "8b3bfdd1-cbbf-41fa-850f-1ca6664d427e",
+	"name": "Path Applications",
+	"timestamp": "2021-05-01T08:31:01.672Z",
+	"collection_id": "35d9cbf4-521e-48b0-8691-64f1b0bb3881",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 2,
+	"totalFail": 14,
+	"results": [
+		{
+			"id": "18177b13-d9c9-4473-b676-711a41f945b0",
+			"name": "A,Y,Y(3)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 1491,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1491
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "8b093ad0-3dfc-4173-9d90-13205b7dd407",
+			"name": "A,Y,N(2)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 931,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				931
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "58650d20-ff81-4c6a-8956-da4ec0b82ae1",
+			"name": "A,N,Y(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 926,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				926
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "84372942-c128-4245-b77e-d9c846ce1fba",
+			"name": "A,N,N(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 915,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				915
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "b98ebe1b-95b2-4091-8e8e-e933bb5eba3c",
+			"name": "B,Y,Y(2)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 873,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				873
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "601955b8-d88a-4d47-9ee0-d939c917e98f",
+			"name": "B,Y,N(2)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 912,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				912
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "dbe72d97-e7d8-4f46-b337-6ecdaa7a5dff",
+			"name": "B,N,Y(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 973,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				973
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "d0b9f71a-7b6f-458c-a05a-485bfb667ac5",
+			"name": "B,N,N(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 904,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				904
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "0a9d4e73-8377-4aaf-aa64-703ba628a427",
+			"name": "C,Y,Y(1)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 874,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				874
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "e850f207-75dc-4015-8f81-9dbd66ed46a2",
+			"name": "C,Y,N(1)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 920,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				920
+			],
+			"allTests": [
+				{
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "c5334046-c581-4aa6-8ff7-2c72bdb069e1",
+			"name": "C,N,Y(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 1045,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1045
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "d91595a4-7bfc-40e0-8f46-496c641ec941",
+			"name": "C,N,N(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 942,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				942
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "1b5fac7e-d88e-47d6-89d1-8b17edac7c35",
+			"name": "D,Y,Y(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 906,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				906
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "c1325924-4c3f-4f58-a8f4-47f489a828de",
+			"name": "D,Y,N(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 889,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				889
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "7db6f012-1524-4972-9bdc-12bdd646bdc2",
+			"name": "D,N,Y(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 985,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				985
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "90a7578f-a0aa-446b-9afe-78da5e756826",
+			"name": "D,N,N(0)",
+			"url": "http://localhost:3001/local//category/core-result",
+			"time": 1004,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1004
+			],
+			"allTests": [
+				{
+					"Body is correct": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 15490,
+	"collection": {
+		"requests": [
+			{
+				"id": "18177b13-d9c9-4473-b676-711a41f945b0",
+				"method": "POST"
+			},
+			{
+				"id": "8b093ad0-3dfc-4173-9d90-13205b7dd407",
+				"method": "POST"
+			},
+			{
+				"id": "58650d20-ff81-4c6a-8956-da4ec0b82ae1",
+				"method": "POST"
+			},
+			{
+				"id": "84372942-c128-4245-b77e-d9c846ce1fba",
+				"method": "POST"
+			},
+			{
+				"id": "b98ebe1b-95b2-4091-8e8e-e933bb5eba3c",
+				"method": "POST"
+			},
+			{
+				"id": "601955b8-d88a-4d47-9ee0-d939c917e98f",
+				"method": "POST"
+			},
+			{
+				"id": "dbe72d97-e7d8-4f46-b337-6ecdaa7a5dff",
+				"method": "POST"
+			},
+			{
+				"id": "d0b9f71a-7b6f-458c-a05a-485bfb667ac5",
+				"method": "POST"
+			},
+			{
+				"id": "0a9d4e73-8377-4aaf-aa64-703ba628a427",
+				"method": "POST"
+			},
+			{
+				"id": "e850f207-75dc-4015-8f81-9dbd66ed46a2",
+				"method": "POST"
+			},
+			{
+				"id": "c5334046-c581-4aa6-8ff7-2c72bdb069e1",
+				"method": "POST"
+			},
+			{
+				"id": "d91595a4-7bfc-40e0-8f46-496c641ec941",
+				"method": "POST"
+			},
+			{
+				"id": "1b5fac7e-d88e-47d6-89d1-8b17edac7c35",
+				"method": "POST"
+			},
+			{
+				"id": "c1325924-4c3f-4f58-a8f4-47f489a828de",
+				"method": "POST"
+			},
+			{
+				"id": "7db6f012-1524-4972-9bdc-12bdd646bdc2",
+				"method": "POST"
+			},
+			{
+				"id": "90a7578f-a0aa-446b-9afe-78da5e756826",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,25 @@
+
+
+.textArea {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 50px;
+    border-radius: 10px;
+    min-width: 150px;
+    min-height: 80px
+}
+
+.buttonContainer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.noticeModal {
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, - 50%);
+    left: 50%;
+    top: 50%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="en-au" http-equiv="Content-Language">
+    <title>Report</title>
+</head>
+<body>
+<div class="container bg-logo">
+    <h1 class="auto-style9 text-center" lang="en-au">
+        ASD ESSENTIAL EIGHT
+    </h1>
+    <h5 class="pl-2 text-right col-md-9 col-md-offset-2">Presented by Securebiz</h5>
+    <h2>Report Outline</h2>
+    <p class="auto-style13 col-md-10 col-md-offset-2">
+        The following report demonstrates your current maturity
+        level with respect to industry standard and the ASD Essential Eight Cyber
+        Security Principals.&nbsp;<o:p></o:p>
+    </p>
+    <h3 lang="en-au">
+        ASD Essential Eight Mitigation Strategy Results
+    </h3>
+    {{#each templateVariables }}
+    <table class="table table-responsive-xl table-dark table-striped" style="page-break-inside:avoid;">
+        <tbody>
+        <tr>
+            <td colspan="3" style="padding-top:25px;">
+                <h4>{{categoryTitle}} - You have reached maturity level {{maturityLevel}}!</h4>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style9">
+                <span lang="en-au"><span class="auto-style15">Question</span></span></td>
+            <td class="auto-style9">
+                <span lang="en-au"><span class="auto-style15">Response</span></span></td>
+            <td class="auto-style9">
+                <span lang="en-au"><span class="auto-style15">Mitigation</span></span></td>
+        </tr>
+
+        {{#each this.mitigationQuestionsAnswered}}
+
+        <tr>
+            <td><span lang="en-au">{{this.QuestionLabel}}</span></td>
+            <td><span lang="en-au">{{{this.QuestionAnswersString}}}</span></td>
+            <td><span lang="en-au">{{this.Mitigation}}</span></td>
+        </tr>
+
+        {{/each}}
+
+        </tbody>
+    </table>
+    {{/each}}
+</div>
+
+<style>
+    /* Bootstrap CSS parsed inline here sourced from express/public/lib/bootstrap/css/bootstrap.min.css */
+    {{{ bootStrapCss }}}
+
+    /* Custom CSS parsed inline here sourced from express/public/css/style.css */
+    {{{ customCss }}}
+</style>
+</body>
+</html>

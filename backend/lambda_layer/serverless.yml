@@ -1,0 +1,13 @@
+service: lambda-layer
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: ap-southeast-2
+  profile: default
+
+layers:
+  SecureBizLayer:
+    path: securebiz_layer
+    description: 'securebiz layer'

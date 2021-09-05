@@ -1,0 +1,180 @@
+@import './../global.scss';
+
+.tableTitle {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+
+.tableData {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+  font-size: small;
+}
+
+.tableData td, .tableData th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tableData tr:nth-child(even){background-color: #f2f2f2;}
+
+.tableData tr:hover {background-color: #ddd;}
+
+.tableData th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #2ca5f7;
+  color: white;
+}
+
+
+.navModal > div > div{
+  width: 100%;
+  height: auto;
+  width: 770px;
+  right: 135px;
+  display: compact
+}
+
+.navModal {
+  top:calc(50% - 240px);
+}
+
+.navModalHeader span{
+  font-size: 45px;
+  position:absolute;
+  top:5px;
+  right:24px
+}
+
+.navModalTitle {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: $darkGreyText
+}
+
+.loadingSpinner {
+    position:absolute;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    z-index: 1000;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next { color: red; }
+
+.qModal {
+  min-height: fit-content;
+
+}
+
+.qfooter {
+  justify-content: space-between !important;
+}
+
+.swiperContainer {
+  min-height: fit-content;
+  //width: 800px
+}
+
+.answerContainer {
+  justify-content: center;
+  padding: 2rem 0;
+  max-width: 75vw
+
+}
+.answerButton {
+  //background-color: $primaryColor;
+  background-color: $lightGreen;
+  padding: 5px;
+  margin:5px;
+}
+.answerButton:focus {
+  background-color: $logoColor;
+  padding: 5px;
+  margin:5px
+}
+.answerButton[data-clicked="Clicked"] {
+  background-color: $logoColor;
+  padding: 5px;
+  margin:5px
+}
+
+
+.next {
+  background-color: $primaryColor;
+}
+
+.backButtonHide {
+  display:none;
+}
+
+.backButtonShow {
+  background-color: #65187A !important;
+  color: white
+}
+.maturityCategory {
+  font-family: arial, sans-serif;
+  color: rgb(10, 74, 151);
+  font-size: 2 rem;
+  font-weight: bolder;
+}
+.maturityLevel {
+  font-family: arial, sans-serif;
+  color: rgb(10, 74, 151);
+  font-size: 2 rem;
+  font-weight: bolder;
+}
+
+.tableTitle {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+.tableData {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+  font-size: small;
+}
+
+.tableData td, .tableData th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tableData tr:nth-child(even){background-color: #f2f2f2;}
+
+.tableData tr:hover {background-color: #ddd;}
+
+.tableData th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #2ca5f7;
+  color: white;
+}
+@media (max-width: $mobileBreakPoint) {
+  .answerContainer {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    width:300px;
+    padding: 1rem 0
+  }
+
+  .swiperContainer {
+    width: 300px;
+    min-height: 350px;
+  }
+}

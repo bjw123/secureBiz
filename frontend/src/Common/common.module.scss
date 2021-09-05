@@ -1,0 +1,31 @@
+@import './../global.scss';
+
+  .mainContainer {
+    background: #fefefe;;
+    width:80%;
+    height:100%;
+    min-height: 600px;
+    padding:2rem;
+    margin: 0 auto;
+    box-shadow: 10px 10px 10px #ececec;
+    display: grid;
+    justify-items: center;
+    //fix for navbar overflow bug *navbar text no longer visible on top of mainContainer
+    position: relative;
+    top: 80px;
+    // z-index: -2;
+  }
+  .mainTitle {
+    color:$primaryColor;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: $mobileBreakPoint) {
+    .mainContainer {
+        width:95%;
+        padding:2rem;
+        margin: 0 auto;
+        box-shadow: 10px 10px 10px #ececec;
+      }
+  }

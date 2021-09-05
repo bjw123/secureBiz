@@ -1,0 +1,406 @@
+@import './../global.scss';
+
+
+$lightGrey: #5e5e5d;
+$midGrey: #363635;
+$darkGrey:#2b2b2a;
+
+
+.navHeader {
+    background-color:$midGrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    height: 60px
+}
+
+.navBannerLogo {
+    background-color: $lightGrey;
+    max-height: 100px;
+    width:100%;
+    border-radius: 0 999px 999px 0;
+    text-align: right;
+     position: relative;
+}
+
+.navBannerLogo::before {
+     background-color: $lightGrey;
+     border-radius: 0 999px 999px 0;
+     display: block;
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 9999px;
+    height: 100%;
+   
+}
+.navBannerCenter {
+  
+    width:100%
+}
+.navBannerCenter:hover {
+    background-color: #1e1e1e;
+    cursor: pointer;
+    text-decoration:none !important;
+     color: #1e1e1e;
+}
+.logoIcon {
+    max-height: 40px;
+    filter: brightness(0) invert(1);
+    margin: 9px;
+}
+.appName {
+    color: white;
+    padding: 1rem;
+    line-height: 2.7;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.logo {
+    color: $logoColor !important;
+    font-size: 2.25rem;
+    top: 10px;
+    padding: 0px;
+    position: absolute;
+    top: 100px;
+    left: 800px;
+    letter-spacing: 3px;
+    top:21px;
+    left: 50%;
+    transform: translateX(-555px);
+}
+
+.topNav {
+    padding: 0px;
+    max-width: 1141.778px;
+    margin: 0 auto;
+     background-color: #363635;
+}
+.mobMenuContainer {
+   
+   
+}
+.mobMenu {
+    padding: 10px;
+    align-content: left;
+    background-color: $lightGrey;
+    width: 60px;
+    cursor: pointer;
+}
+.mobNavWrap {
+    
+    max-width: 1141.778px;
+    margin: 0 auto;
+     background-color: #363635;
+     position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.mobNavContainer {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+.mobNavBanner {
+    margin: 0 auto;
+}
+
+.cheeseMenuOverride {
+    width: auto !important;
+    background-color: $darkGrey;
+}
+
+.navMobSubListContainer {
+       top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 0;
+   
+    list-style: none;
+    font-size: 1rem;;
+    text-align: left;
+
+    background-clip: padding-box;
+   
+    background-color: #2b2b2a;
+    // left: 40px;
+     width:350px;
+}
+
+
+
+.navMobSubList {
+    color:white;
+    background-color: $lightGrey;
+    padding: 1rem 0.88rem;
+    font-size: 0.8rem;
+}
+.navMobSubList:hover {
+     background-color: $darkGrey;
+    cursor: pointer;
+    
+}
+
+.topNavWrapper {
+ background-color: #363635;
+ position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+@media (max-width: 1022px) {
+    .topNavWrapper {
+        display:none
+    }
+}
+.nav {
+    width: 100%;
+    background-color:$darkGrey;
+    display: grid;
+    margin: 0;
+  
+    justify-content: center;
+
+}
+
+.navbar-nav>li {
+    margin-bottom: 0;
+}
+
+.navList {
+     list-style: 'none';
+     font-weight: '300';
+       position: relative;
+     margin:0
+}
+
+.navSubListContainer {
+   top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    /* margin: 2px 0 0; */
+    list-style: none;
+    font-size: 1rem;;
+    text-align: left;
+    /* background-color: #fff; */
+    /* border: 1px solid #ccc; */
+    /* border: 1px solid rgba(0, 0, 0, 0.15); */
+    /* border-radius: 4px; */
+    background-clip: padding-box;
+    position: absolute;
+    background-color: #2b2b2a;
+    left: 40px;
+    width:350px
+    
+}
+
+.navSubList {
+    color:white;
+    background-color: $darkGrey;
+    padding: 1rem 0.88rem;
+    font-size: 0.9rem;
+
+}
+
+.navSubList:hover {
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+
+.navButton {
+    float: left;
+    color: white;
+    padding: 18px 24.003px 18px 16.001px;
+    list-style: none;
+    font-weight: 300;
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+
+.navButton:hover {
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+
+.linkContainer {
+    /*
+    //position: center; = animates properly but position wont change, requires rework of multiple css classes
+    position: fixed; //no animation, consider adding a background so it stands out
+    left: 59%;
+
+    top: 52px;
+    background-color: #0a98c0;
+    border-radius: 25px;
+     */
+    position: relative;
+    //text-align: center;
+    border-radius: 25px;
+    top: 50px;
+    left: 54%;
+}
+
+.navLink {
+
+    margin-left: 60px !important;
+    color: rgba(0,0,0,1) !important;
+    border-radius: 35px;
+    transition: 0.4s;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    transition: all;
+    font-weight: 500;
+    transition: letter-spacing 0.5s ease 0.1s;
+
+
+}
+
+.navLink a::after{
+    display: none; 
+}
+
+.navToggle {
+    
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+
+}
+
+/*Nav animations*/
+
+.navLink:hover {
+    color: #1691d1 !important;
+    font-weight: 400 !important;
+    letter-spacing: 2px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.5s ease 0.1s;
+    transition-duration: 0.5s;
+    border: 1px solid $lightBlue;
+    background-color: rgba(127, 137, 161, 0.25);
+    background-repeat: round;
+}
+
+.linkContainer .navLink a {
+    color: rgba(0,0,0,1) !important;
+}
+
+.linkContainer .navLink a:hover {
+    color: #1691d1 !important;
+}
+
+/*Dropdown*/
+.linkContainer .navLink div {
+
+    border-radius: 15px;
+    min-width: 200px;
+    z-index: 1;
+    box-shadow: 1px 2px 5px 3px #555;
+    background: #f5f8fd;
+    font-style: normal;
+    font-display: block;
+    font-size: 1em;
+    -webkit-transition: all 400ms;
+    transition: all 0.3s ease 0.1s;
+    transition-duration: 0.3s;
+
+
+}
+
+.linkContainer .navLink div a {
+    color: black;
+    border-radius: 15px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+/*Dropdown animations*/
+.navLink div a {
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 35px;
+    color: $lightBlue !important;
+    direction: rtl;
+    text-decoration: dashed;
+    letter-spacing: 0px !important;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-transition: all 400ms;
+    transition: all 0.3s ease 0.1s;
+    transition-duration: 0.3s;
+}
+
+.navLink div a:hover {
+    background-color: rgba(127, 137, 161, 0.25);
+    background-repeat: round;
+    letter-spacing: 2px !important;
+    border: 1px solid $lightBlue;
+}
+
+@media (max-width: $mobileBreakPoint) {
+    .navLink {
+        padding-left: 0px !important;
+    }
+
+    .linkContainer {
+        position: sticky;
+        background-color: white;
+        margin-top:15px;
+        width: 80%;
+        left: 0%;
+    }
+}
+
+@media (max-width: $smallWindowBreakPoint) {
+    .logo {
+        left: 50%;
+        transform: translateX(-465px);
+    }
+}
+
+@media (max-width: $tabletBreakPoint) {
+    .logo {
+        left: 50%;
+        transform: translateX(-345px);
+        font-size: 28px;
+        top:16px;
+    }
+
+    .navLink {
+        margin-left: 5px !important;
+    }
+}
+
+@media (max-width: $mobileBreakPoint) {
+    .logo {
+        left: 15px;
+        transform: translateX(0px);
+        font-size: 28px !important;
+        top:16px;
+    }
+
+    .navLink div a {
+        font-size: 0.9em;
+    }
+
+    .navLink div a:hover {
+        letter-spacing: 0px !important;
+    }
+
+    .linkContainer .navLink div {
+        width: 310px;
+    }
+}

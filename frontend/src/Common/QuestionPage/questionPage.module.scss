@@ -1,0 +1,63 @@
+
+@import './../../global.scss';
+// .swiper-button-next {
+//   background-image: url(./next.svg);
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+//   background-position: center;
+// }
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next { color: red; }
+
+.qModal {
+  min-height: 300px;
+
+}
+
+.qfooter {
+  justify-content: space-between !important;
+}
+
+.swiperContainer {
+  min-height: 300px;
+  width: 800px
+}
+
+.answerContainer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 2rem 0
+}
+.answerButton {
+  background-color: $primaryColor;
+  padding: 10px;
+  margin:10px;
+}
+
+.next {
+  background-color: $primaryColor;
+}
+
+.backButtonHide {
+  display:none;
+}
+
+
+@media (max-width: $mobileBreakPoint) {
+  .answerContainer {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    width:300px;
+    padding: 1rem 0
+  }
+
+  .swiperContainer {
+    width: 300px;
+    min-height: 350px;
+  }
+}

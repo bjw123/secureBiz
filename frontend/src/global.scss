@@ -1,0 +1,77 @@
+
+//SWIPER CSS
+// @import '~swiper/swiper.scss';
+// @import '~swiper/components/navigation/navigation.scss';
+// @import '~swiper/components/pagination/pagination.scss';
+// @import '~swiper/components/scrollbar/scrollbar.scss';
+
+
+
+//@import '~react-dynamic-swiper/lib/styles.css';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700);
+@import '@fortawesome/fontawesome-free/css/all.css';
+//@import './Dashboard/assets/plugins/nucleo/css/nucleo.css';
+
+// import '@fortawesome/fontawesome-free/js/all.js';
+
+
+
+// WEB THEME COLORS
+$logoColor: #413e66;
+$primaryColor:#1691d1;
+$greyBackGround: #f5f8fd;
+$buttonBoxShadow: 0px 15px 30px -5px rgba(0, 0, 0, 0.57);
+$lightBlue: #1bb1dc;
+$lightGreen: #4CAF50;
+$darkGreyText: #444444;
+
+// DEVICE BREAKPOINTS
+$mobileBreakPoint: 768px;
+$tabletBreakPoint: 990px;
+$smallWindowBreakPoint: 1200px;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+    font-size: 1.125em;
+  }
+
+h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.swiper-button-next {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next { color: red; }
+
+.invalid-border {
+  border: 1px solid red !important;
+}
+
+
+// overwrite boostrap primary
+.btn-primary {
+  background-color: $primaryColor !important;
+  border-color: $primaryColor !important;
+}
+
+
+.loadingSpinner {
+    position:absolute;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    z-index: 1000;
+
+}

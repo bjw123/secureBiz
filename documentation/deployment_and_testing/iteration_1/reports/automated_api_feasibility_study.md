@@ -1,0 +1,16 @@
+﻿**Automated API testing: Feasibility Study for the Secure Biz Web Application**
+
+**1.0 Introduction**
+A framework for undertaking automated API testing was investigated in Iteration 1. Automated API testing will primarily be used to test the logic used to calculate the end-user’s score for each questionnaire in the Secure Biz web application. Currently, the team uses Sikuli for end-to-end testing, but automated API testing will enable each test case to be tested more efficiently. This feasibility study focused on two frameworks. The first framework involved the development of scripts using the TestNG and REST Assured dependencies within a Maven project. The second framework used the tool Postman. The findings for each framework are discussed under the sub-headings below.
+
+**2.0 Findings**
+The following findings are based on upskilling activities and experiments using the TestNg, REST Assured and Postman. These activities were not extensive, as the purpose of the feasibility study was to simply identify a framework for automating API testing for the project.
+
+**2.1 TestNG and REST Assured**
+The team are planning to use the Selenium web driver as part of their broader testing framework. TestNG and REST Assured are two dependencies that are commonly used for integrating API testing with Selenium. To assess if the framework was suitable for the project, a range of upskilling activities were undertaken. These activities demonstrated that the framework is useful for making simple POST, GET, PUT and DELETE requests as the requests need to be written manually inside a Java function. However, the POST request for each test case in the Secure Biz web application is over 50 lines long. This makes the framework impractical for automating API tests with hundreds of test cases. As a result, a framework was required that could intercept and replay HTTP traffic.
+
+**2.2 Postman**
+Before identifying Postman as a potential solution, it was recognised that BurpSuite could be used to intercept and replay HTTP requests. This is useful, as the POST request for each test case in the Secure Biz web application are too long to write manually, as previously discussed. This same function is also available in Postman using a Chrome browser extension. A method was developed in Postman to iterate through every test case in the Configure Microsoft Office Macro Settings questionnaire using the existing Sikuli end-to-end test script. With the Chrome browser extension installed, Postman intercepted and saved each POST request. These POST requests were subsequently saved to a collection and replayed. The automated API test takes a few seconds to complete compared to approximately 20 minutes with the end-to-end Sikuli script. The Postman collections can also be shared between team members.
+
+**3.0 Recommendations**
+The REST Assured and TestNG dependencies are industry standard tools for automated API testing. But the length of the POST request for each test case in the Secure Biz web application makes the framework inefficient. Postman, on the other hand, is the recommended framework, as it enables HTTP requests to be intercepted and replayed. This eliminates the need to manually write each API test and the collections can be shared between team members.

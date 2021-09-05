@@ -1,0 +1,969 @@
+{
+	"info": {
+		"_postman_id": "c53f9488-2a21-4f79-8974-5ec2cab80f4e",
+		"name": "macro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A,Y,Y(3)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":3,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Questions\": [\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80f2\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Please choose the most relevant answer for your current macro security setup:\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"RADIO\",\r\n            \"Mitigation\": \"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\r\n            \"QuestionSetNumber\": 1,\r\n            \"QuestionNumber\": 25,\r\n            \"QuestionCore\": true,\r\n            \"QuestionCoreNumber\": 7,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80f3\",\r\n                    \"Value\": \"a\",\r\n                    \"Label\": \"Microsoft Office macros are only allowed to execute from trusted locations where write access is locked down to administrators who appropriately evaluate macros before adding files into these locations\",\r\n                    \"QuestionNext\": 26,\r\n                    \"QuestionNextCore\": 8\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80f7\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\r\n            \"QuestionSetNumber\": 2,\r\n            \"QuestionNumber\": 26,\r\n            \"QuestionCoreNumber\": 8,\r\n            \"QuestionCore\": true,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80f8\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 27,\r\n                    \"QuestionNextCore\": 9\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80fa\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you block Microsoft Office macros in documents that originate from the internet?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\r\n            \"QuestionSetNumber\": 3,\r\n            \"QuestionNumber\": 27,\r\n            \"QuestionCoreNumber\": 9,\r\n            \"QuestionCore\": true,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80fb\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 28,\r\n                    \"QuestionNextCore\": 10\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80fd\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you block personal use of IT resources on corporate assets/networks?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\r\n            \"QuestionSetNumber\": 4,\r\n            \"QuestionNumber\": 28,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80ff\",\r\n                    \"Value\": false,\r\n                    \"Label\": \"No\",\r\n                    \"QuestionNext\": 29,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8100\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\r\n            \"QuestionSetNumber\": 5,\r\n            \"QuestionNumber\": 29,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8101\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 30,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8103\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you have secure and trusted methods to share files with external stakeholders?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\r\n            \"QuestionSetNumber\": 6,\r\n            \"QuestionNumber\": 30,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8104\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 31,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8106\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a spam filter to check incoming emails?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 7,\r\n            \"QuestionNumber\": 31,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8107\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 32,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8109\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\r\n            \"QuestionDescription\": \"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 8,\r\n            \"QuestionNumber\": 32,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d810a\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 33,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d810c\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 9,\r\n            \"QuestionNumber\": 33,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d810d\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 34,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A,Y,N(1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":1,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Questions\": [\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80f2\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Please choose the most relevant answer for your current macro security setup:\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"RADIO\",\r\n            \"Mitigation\": \"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\r\n            \"QuestionSetNumber\": 1,\r\n            \"QuestionNumber\": 25,\r\n            \"QuestionCore\": true,\r\n            \"QuestionCoreNumber\": 7,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80f3\",\r\n                    \"Value\": \"a\",\r\n                    \"Label\": \"Microsoft Office macros are only allowed to execute from trusted locations where write access is locked down to administrators who appropriately evaluate macros before adding files into these locations\",\r\n                    \"QuestionNext\": 26,\r\n                    \"QuestionNextCore\": 8\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80f7\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\r\n            \"QuestionSetNumber\": 2,\r\n            \"QuestionNumber\": 26,\r\n            \"QuestionCoreNumber\": 8,\r\n            \"QuestionCore\": true,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80f8\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 27,\r\n                    \"QuestionNextCore\": 9\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80fa\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you block Microsoft Office macros in documents that originate from the internet?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\r\n            \"QuestionSetNumber\": 3,\r\n            \"QuestionNumber\": 27,\r\n            \"QuestionCoreNumber\": 9,\r\n            \"QuestionCore\": true,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80fc\",\r\n                    \"Value\": false,\r\n                    \"Label\": \"No\",\r\n                    \"QuestionNext\": 28,\r\n                    \"QuestionNextCore\": 10\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80fd\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you block personal use of IT resources on corporate assets/networks?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\r\n            \"QuestionSetNumber\": 4,\r\n            \"QuestionNumber\": 28,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80fe\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 29,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8100\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\r\n            \"QuestionSetNumber\": 5,\r\n            \"QuestionNumber\": 29,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8101\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 30,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8103\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you have secure and trusted methods to share files with external stakeholders?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\r\n            \"QuestionSetNumber\": 6,\r\n            \"QuestionNumber\": 30,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8104\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 31,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8106\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a spam filter to check incoming emails?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 7,\r\n            \"QuestionNumber\": 31,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8107\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 32,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8109\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\r\n            \"QuestionDescription\": \"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 8,\r\n            \"QuestionNumber\": 32,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d810a\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 33,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d810c\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 9,\r\n            \"QuestionNumber\": 33,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d810d\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 34,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A,N,Y(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Questions\": [\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80f2\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Please choose the most relevant answer for your current macro security setup:\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"RADIO\",\r\n            \"Mitigation\": \"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\r\n            \"QuestionSetNumber\": 1,\r\n            \"QuestionNumber\": 25,\r\n            \"QuestionCore\": true,\r\n            \"QuestionCoreNumber\": 7,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80f3\",\r\n                    \"Value\": \"a\",\r\n                    \"Label\": \"Microsoft Office macros are only allowed to execute from trusted locations where write access is locked down to administrators who appropriately evaluate macros before adding files into these locations\",\r\n                    \"QuestionNext\": 26,\r\n                    \"QuestionNextCore\": 8\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80f7\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\r\n            \"QuestionSetNumber\": 2,\r\n            \"QuestionNumber\": 26,\r\n            \"QuestionCoreNumber\": 8,\r\n            \"QuestionCore\": true,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80f9\",\r\n                    \"Value\": false,\r\n                    \"Label\": \"No\",\r\n                    \"QuestionNext\": 27,\r\n                    \"QuestionNextCore\": 9\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80fa\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you block Microsoft Office macros in documents that originate from the internet?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\r\n            \"QuestionSetNumber\": 3,\r\n            \"QuestionNumber\": 27,\r\n            \"QuestionCoreNumber\": 9,\r\n            \"QuestionCore\": true,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80fb\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 28,\r\n                    \"QuestionNextCore\": 10\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d80fd\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you block personal use of IT resources on corporate assets/networks?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\r\n            \"QuestionSetNumber\": 4,\r\n            \"QuestionNumber\": 28,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d80fe\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 29,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8100\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\r\n            \"QuestionSetNumber\": 5,\r\n            \"QuestionNumber\": 29,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8101\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 30,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8103\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you have secure and trusted methods to share files with external stakeholders?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\r\n            \"QuestionSetNumber\": 6,\r\n            \"QuestionNumber\": 30,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8104\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 31,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8106\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a spam filter to check incoming emails?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 7,\r\n            \"QuestionNumber\": 31,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d8107\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 32,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d8109\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\r\n            \"QuestionDescription\": \"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 8,\r\n            \"QuestionNumber\": 32,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d810a\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 33,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"601bafa3abe3cc7b086d810c\",\r\n            \"QuestionCategory\": \"OfficeMacro\",\r\n            \"QuestionLabel\": \"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\r\n            \"QuestionDescription\": \"\",\r\n            \"QuestionType\": \"BOOLEAN\",\r\n            \"Mitigation\": \"\",\r\n            \"QuestionSetNumber\": 9,\r\n            \"QuestionNumber\": 33,\r\n            \"QuestionCore\": false,\r\n            \"Answers\": [\r\n                {\r\n                    \"_id\": \"601bafa3abe3cc7b086d810d\",\r\n                    \"Value\": true,\r\n                    \"Label\": \"Yes\",\r\n                    \"QuestionNext\": 34,\r\n                    \"QuestionNextCore\": null\r\n                }\r\n            ],\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A,N,N(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f3\",\"Value\":\"a\",\"Label\":\"Microsoft Office macros are only allowed to execute from trusted locations where write access is locked down to administrators who appropriately evaluate macros before adding files into these locations\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[null],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[null],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[null],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[null],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "B,Y,Y(2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":2,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f4\",\"Value\":\"b\",\"Label\":\"Only digitally signed Microsoft Office Macros from trusted publishers are allowed to execute\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f8\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fb\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80ff\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "B,Y,N(1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":1,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f4\",\"Value\":\"b\",\"Label\":\"Only digitally signed Microsoft Office Macros from trusted publishers are allowed to execute\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f8\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fc\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "B,N,Y(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f4\",\"Value\":\"b\",\"Label\":\"Only digitally signed Microsoft Office Macros from trusted publishers are allowed to execute\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f9\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fb\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80ff\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8102\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8105\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8108\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810b\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810e\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "B,N,N(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f4\",\"Value\":\"b\",\"Label\":\"Only digitally signed Microsoft Office Macros from trusted publishers are allowed to execute\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f9\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fc\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C,Y,Y(1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":1,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f5\",\"Value\":\"c\",\"Label\":\"Microsoft Office macros are allowed to execute after user approval\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f8\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fb\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80ff\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C,Y,N(1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":1,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f5\",\"Value\":\"c\",\"Label\":\"Microsoft Office macros are allowed to execute after user approval\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f8\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fc\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810b\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C,N,Y(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f5\",\"Value\":\"c\",\"Label\":\"Microsoft Office macros are allowed to execute after user approval\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f9\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fb\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C,N,N(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f5\",\"Value\":\"c\",\"Label\":\"Microsoft Office macros are allowed to execute after user approval\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f9\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fc\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8108\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "D,Y,Y(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f6\",\"Value\":\"d\",\"Label\":\"None\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f8\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fb\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80ff\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "D,Y,N(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f6\",\"Value\":\"d\",\"Label\":\"None\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f8\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fc\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810e\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "D,N,Y(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f6\",\"Value\":\"d\",\"Label\":\"None\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f9\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fb\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fe\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8104\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "D,N,N(0)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"{\\\"0\\\":{\\\"Level\\\":0,\\\"QuestionCategory\\\":\\\"OfficeMacro\\\"},\\\"msg\\\":\\\"\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Questions\":[{\"_id\":\"601bafa3abe3cc7b086d80f2\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Please choose the most relevant answer for your current macro security setup:\",\"QuestionDescription\":\"\",\"QuestionType\":\"RADIO\",\"Mitigation\":\"The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.\",\"QuestionSetNumber\":1,\"QuestionNumber\":25,\"QuestionCore\":true,\"QuestionCoreNumber\":7,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f6\",\"Value\":\"d\",\"Label\":\"None\",\"QuestionNext\":26,\"QuestionNextCore\":8}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80f7\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Are Microsoft Office macro settings configured so that end users cannot change settings?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.\",\"QuestionSetNumber\":2,\"QuestionNumber\":26,\"QuestionCoreNumber\":8,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80f9\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":27,\"QuestionNextCore\":9}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fa\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block Microsoft Office macros in documents that originate from the internet?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.\",\"QuestionSetNumber\":3,\"QuestionNumber\":27,\"QuestionCoreNumber\":9,\"QuestionCore\":true,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80fc\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":28,\"QuestionNextCore\":10}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d80fd\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you block personal use of IT resources on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":4,\"QuestionNumber\":28,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d80ff\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":29,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8100\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a web proxy to monitor and control internet usage on corporate assets/networks?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.\",\"QuestionSetNumber\":5,\"QuestionNumber\":29,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8101\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":30,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8103\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you have secure and trusted methods to share files with external stakeholders?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.\",\"QuestionSetNumber\":6,\"QuestionNumber\":30,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8105\",\"Value\":false,\"Label\":\"No\",\"QuestionNext\":31,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8106\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a spam filter to check incoming emails?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":7,\"QuestionNumber\":31,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d8107\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":32,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d8109\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you utilise an IPS or IDS system to scan all incoming files and network traffic?\",\"QuestionDescription\":\"IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":8,\"QuestionNumber\":32,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810a\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":33,\"QuestionNextCore\":null}],\"__v\":0},{\"_id\":\"601bafa3abe3cc7b086d810c\",\"QuestionCategory\":\"OfficeMacro\",\"QuestionLabel\":\"Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?\",\"QuestionDescription\":\"\",\"QuestionType\":\"BOOLEAN\",\"Mitigation\":\"\",\"QuestionSetNumber\":9,\"QuestionNumber\":33,\"QuestionCore\":false,\"Answers\":[{\"_id\":\"601bafa3abe3cc7b086d810d\",\"Value\":true,\"Label\":\"Yes\",\"QuestionNext\":34,\"QuestionNextCore\":null}],\"__v\":0}]}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/local//category/core-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"local",
+						"",
+						"category",
+						"core-result"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

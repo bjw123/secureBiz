@@ -1,0 +1,2528 @@
+[
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Is application control implemented on all workstations to restrict the execution to an approved set of",
+    "QuestionDescription": "An approved set is the set of applications/software that you have allowed, otherwise known as your “whitelisted” applications.",
+    "QuestionType": "RADIO",
+    "Mitigation": "Application control software can be used to ensure only approved applications are allowed to run/execute. You will need to get application control software installed on all workstations and servers, this software can be attained and installed through internal or external IT technicians. (Note: Microsoft Windows Defender software also contains an application control component.)",
+    "QuestionSetNumber": 1,
+    "QuestionNumber": 1,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 1,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Executables",
+        "QuestionNext": 2,
+        "QuestionNextCore": 2
+      },
+      {
+        "Value": "b",
+        "Label": "Executables, software libraries, scripts and installers",
+        "QuestionNext": 2,
+        "QuestionNextCore": 2
+      },
+      {
+        "Value": "c",
+        "Label": "none of the above",
+        "QuestionNext": 2,
+        "QuestionNextCore": 2
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Is application control implemented on all servers to restrict the execution to an approved set of",
+    "QuestionDescription": "",
+    "QuestionType": "RADIO",
+    "Mitigation": "Determining an approved set of software is important to restrict unwanted and potentially malicious software. In order to do this, you will need to identify approved applications by taking an inventory of required software in your business.This approved set will also need to be regularly updated and controlled through a change management program.",
+    "QuestionSetNumber": 2,
+    "QuestionNumber": 2,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 2,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Executables",
+        "QuestionNext": 3,
+        "QuestionNextCore": 3
+      },
+      {
+        "Value": "b",
+        "Label": "Executables, software libraries, scripts and installers",
+        "QuestionNext": 3,
+        "QuestionNextCore": 3
+      },
+      {
+        "Value": "c",
+        "Label": "none of the above",
+        "QuestionNext": 3,
+        "QuestionNextCore": 3
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Are Microsoft’s latest recommended block rules implemented to prevent application control bypasses?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is important to implement Microsoft’s block rules as ‘these applications or files can be used by an attacker to circumvent application whitelisting policies’ (Microsoft, 2020). Microsoft’s latest block rules can be found at https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules and can be configured by internal or external IT technicians.",
+    "QuestionSetNumber": 3,
+    "QuestionNumber": 3,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 3,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 4,
+        "QuestionNextCore": 4
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 4,
+        "QuestionNextCore": 4
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Do you ensure all applications in use have been digitally signed by the vendor?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "You should ensure all applications are signed by the vendor to ensure the legitimacy of the application code. A digital certificate that provides the ability to sign code and applications is often provided a Certificate Authority (CA). Certificate Authorities are trusted organisations that provide appropriate identification and vetting of an individual or organisation before issuing any certificates. Your application vetting process should ensure that all applications are digitally signed the vendor that creates or provides the application.",
+    "QuestionSetNumber": 4,
+    "QuestionNumber": 4,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 5,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 5,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Do you enforce an application control policy on your computers?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Your organisation should identify and clearly define the components of its application control policy. Although this policy should be actioned through the use of a software solution, the policy guidelines should be clearly communicated to employees to ensure they understand the components such as:Why application control is in place, Policy regarding downloading and attempting to install applications,The process for requesting a new application be added to the application whitelist",
+    "QuestionSetNumber": 5,
+    "QuestionNumber": 5,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 6,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 6,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Do you have any anti-virus software installed on your computers?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "You should ensure that all assets and servers have an appropriate antivirus software installed to perform malware threat mitigation. Antivirus software performs many functions such as:Scanning critical host components such as start-up files and boot records, Real-time scanning on all host-based activities such as inbound email attachments and files downloaded from the internet, Monitoring the behaviour of applications and flagging anomalous behaviour, Providing scheduled and on-demand scanning of all attached hard drives",
+    "QuestionSetNumber": 6,
+    "QuestionNumber": 6,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 7,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 7,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Do you block end users from downloading and installing software from the internet?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Software installations and download from the internet should be closely monitored or outright prevented from being performed by end users, to prevent security issues that are associated with downloading unauthorized material(s). Software downloads and installations should be a privilege delegated to dedicated administrative accounts and the software should be discussed and approved prior to installation to ensure it is relevant to the needs of the company.",
+    "QuestionSetNumber": 7,
+    "QuestionNumber": 7,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 8,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 8,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Have you ensured only authorised users have admin privileges?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Privileged and administrative users should have clearly defined roles and permissions assigned to them in accordance with the position description used when hiring these staff members. The organisation should also maintain least privilege and separation of privilege for these users to maintain organisational integrity.",
+    "QuestionSetNumber": 8,
+    "QuestionNumber": 8,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 9,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 9,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Do you frequently check to ensure that application control is configured correctly on all computers?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "There should be regular audits conducted to ensure application control configurations are still being applied and implemented. If utilising Windows, this can done through Group Policy which is able to host Windows Defender Application Control (WDAC) or Windows AppLocker configurations and ensure they are being applied and updated with every group policy check that occurs.",
+    "QuestionSetNumber": 9,
+    "QuestionNumber": 9,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 10
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 10
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Does your application control software generate event logs (time stamps, name of blocked file) that can be viewed?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Audit logs ensure system integrity is maintained by providing evidence of events occurring. Typical event logs should include details such as the user or process attempting to launch an executable, the date and time an event/action occurred, the asset number or hardware ID number, the IP address it has occurred from, whether the action was successful or not, and any other system specific details.",
+    "QuestionSetNumber": 10,
+    "QuestionNumber": 10,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 11,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 11,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "AppControl",
+    "QuestionLabel": "Is testing done regularly to check misconfigurations of file system permissions and other ways of bypassing application control?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Manual testing and auditing of system permissions should be conducted regularly to ensure they are still correctly configured as per policy. System permissions should be reviewed to ensure they remain relevant to the information and data being processed on a machine, and to the person using the machine. Vulnerability assessments and penetration testing should be conducted to test the strength of application control mechanisms and ensure they cannot be bypassed or abused for privilege escalation attacks",
+    "QuestionSetNumber": 11,
+    "QuestionNumber": 11,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 12,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 12,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "If a critical security vulnerability is identified, how quickly do you apply an appropriate patch, update or mitigation for the affected system or application?",
+    "QuestionDescription": "",
+    "QuestionType": "RADIO",
+    "Mitigation": "It is important to consider all aspects of applying recent patches before implementing them. Ideally, the company should apply patches for the vulnerabilities as soon as they are found, however thorough testing and discussion should be done first to make a more informed decision. Where updates and patches are found to be beneficial to the security of the company, they should be applied as soon as possible to prevent malicious parties from taking advantage of vulnerabilities.",
+    "QuestionSetNumber": 1,
+    "QuestionNumber": 12,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 4,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Within 48 hours",
+        "QuestionNext": 13,
+        "QuestionNextCore": 5
+      },
+      {
+        "Value": "b",
+        "Label": "Within two weeks",
+        "QuestionNext": 13,
+        "QuestionNextCore": 5
+      },
+      {
+        "Value": "c",
+        "Label": "Within one month",
+        "QuestionNext": 13,
+        "QuestionNextCore": 5
+      },
+      {
+        "Value": "d",
+        "Label": "none of the above",
+        "QuestionNext": 13,
+        "QuestionNextCore": 5
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you update or replace systems and applications where the vendor has ceased providing patches and updates?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Applications that are no longer supported by a vendor presents several risks if they are continually being used in the organization. As time goes by, more vulnerabilities are exposed that are no longer being patched by the vendors, increasing the chance that the organization will fall victim to an attack. Therefore, a suitable replacement should be considered that actively patches its applications security to protect the organizations data.",
+    "QuestionSetNumber": 2,
+    "QuestionNumber": 13,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 5,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 14,
+        "QuestionNextCore": 6
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 14,
+        "QuestionNextCore": 6
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you have an automated process that confirms and records the successful installation of patches and updates for applications?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Monitoring the success or failures of application patch installations is important to ensure issues can be addressed or new features can be implemented accordingly. Having a process that logs installation events will allow the relevant teams to see where errors might have occurred so the patch can be installed again. It is also important to record successful installation of patches, to add accountability if issues arise that can be attributed to the patch installation.",
+    "QuestionSetNumber": 3,
+    "QuestionNumber": 14,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 6,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 15,
+        "QuestionNextCore": 7
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 15,
+        "QuestionNextCore": 7
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you block end users from downloading and installing software from the internet?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Software installations and download from the internet should be closely monitored or outright prevented from being performed by end users, to prevent security issues that are associated with downloading unauthorized material(s). Software downloads and installations should be a privilege delegated to dedicated administrative accounts and the software should be discussed and approved prior to installation to ensure it is relevant to the needs of the company.",
+    "QuestionSetNumber": 4,
+    "QuestionNumber": 15,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 16,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 16,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Are all your software platforms and applications inventoried?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is important that all software platforms, devices and applications are inventoried, reviewed and updated accordingly. This will also allow the security team to review the currently installed software(s) and applications, ensuring there are no unauthorized or unwanted applications installed, as well as outdated software. This list should be actively updated each time a new program or application is installed, updated or removed from the network to ensure the inventory is still relevant.",
+    "QuestionSetNumber": 5,
+    "QuestionNumber": 16,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 17,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 17,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you categorize organisation software and systems based on criticality?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.",
+    "QuestionSetNumber": 6,
+    "QuestionNumber": 17,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 18,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 18,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you currently receive cyber threat intelligence from any information sharing forums or sources?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is important that the organization actively receives and reviews intelligence information from cyber threat sources that continually inform organizations of the analysis of risks associated with technology. This will ensure that the organization receives the most up-to-date information regarding technologies that are relevant to the company, and builds a proactive environment regarding the cyber security of the company.",
+    "QuestionSetNumber": 7,
+    "QuestionNumber": 18,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 19,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 19,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you have a separate development or testing environment to perform application testing?",
+    "QuestionDescription": "This can refer to specific devices that are used for testing purposes only, and can even be used on a separate network or VLAN to your production environment.",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Applications that are to be installed and/or updated into the organization network should be thoroughly tested prior to its integration. This should be done in an alternative testing environment separate from the company's actual operations environment. The testing environment should be configured to replicate the organizations actual environment, and the application can be tested to find possible flaws, vulnerabilities and/or corruptions. Having a testing environment will protect the company’s assets.",
+    "QuestionSetNumber": 8,
+    "QuestionNumber": 19,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 20,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 20,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you have change management procedure to oversee, review and approve all significant IT changes?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "All IT changes that are to be made should be carefully considered before its integration with the organizations system(s). All risks and benefits should be addressed and weighed, and all IT changes should be thoroughly tested in an external testing environment to ensure it does not compromise the organizations security. All approved or unapproved changes that are made and discussed should also be logged for future reference.",
+    "QuestionSetNumber": 9,
+    "QuestionNumber": 20,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 21,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 21,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you have a rollback plan if an update or change 'breaks' a software or system?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "While the company should thoroughly test each application update prior to its installation, a solid rollback, or recovery plan should be designed in the case of malfunction or corruption of the system(s). A good rollback plan will allow the corrupted or ‘broken’ system to return to a functioning state to limit the damage that can occur if an update corrupts the system. The rollback plan should outline a step-by-step process that will allow the company to recover and restore the system in its entirety back to working functionality.",
+    "QuestionSetNumber": 10,
+    "QuestionNumber": 21,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 22,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 22,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you perform any form of Vulnerability Assessment or Penetration test on new systems and applications introduced to your network environment?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "All new systems, applications and patch updates should be thoroughly tested and assessed before it is integrated with the organizations current system(s). A systematic review should be completed to evaluate current known vulnerabilities of the new applications, and a thorough penetration test should also be completed in case vulnerabilities exist that are yet to be documented.",
+    "QuestionSetNumber": 11,
+    "QuestionNumber": 22,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 23
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 23
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you have a centralised and managed distribution across workstations and server fleets for software and application updates?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Having a centralized and managed distribution of application patches across each workstation of the organization will ease the process of updating and reviewing the status of updates across each device. It will also enable uniformity across the organization, ensuring no device is left behind in terms of patches and updates. Another added benefit is time management, as the ability to centralize updates that work across the organization will save a significant amount of time that would otherwise be spent individually updating each system.",
+    "QuestionSetNumber": 12,
+    "QuestionNumber": 23,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 24,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 24,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchApp",
+    "QuestionLabel": "Do you have an application (automated or not) to scan your system to identify required patches?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "The organization should deploy an application that can thoroughly scan active systems, and regularly searches for new or missing updates and patches. Having this process automated will free up time for technical staff to dedicate to other aspects of security and eliminates the possibility that an update or patch is missed.",
+    "QuestionSetNumber": 13,
+    "QuestionNumber": 24,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 25,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 25,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Please choose the most relevant answer for your current macro security setup:",
+    "QuestionDescription": "",
+    "QuestionType": "RADIO",
+    "Mitigation": "The most secure method to deal with macro-enabled documents is to keep them disabled unless there is a genuine business need to use them. For instances where macros and macro-enabled documents need to be used, the safest option is to only allow macros to execute from a trusted location where write permissions are restricted to administrators who assess the safety and necessity of macro-enabled documents before copying them into these trusted locations.",
+    "QuestionSetNumber": 1,
+    "QuestionNumber": 25,
+    "QuestionCore": true,
+    "QuestionCoreNumber": 7,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Microsoft Office macros are only allowed to execute from trusted locations where write access is locked down to administrators who appropriately evaluate macros before adding files into these locations",
+        "QuestionNext": 26,
+        "QuestionNextCore": 8
+      },
+      {
+        "Value": "b",
+        "Label": "Only digitally signed Microsoft Office Macros from trusted publishers are allowed to execute",
+        "QuestionNext": 26,
+        "QuestionNextCore": 8
+      },
+      {
+        "Value": "c",
+        "Label": "Microsoft Office macros are allowed to execute after user approval",
+        "QuestionNext": 26,
+        "QuestionNextCore": 8
+      },
+      {
+        "Value": "d",
+        "Label": "None",
+        "QuestionNext": 26,
+        "QuestionNextCore": 8
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Are Microsoft Office macro settings configured so that end users cannot change settings?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Microsoft Office macro settings should be controlled in a way that your typical end user cannot change the settings themselves. This will ensure that corporate assets are always aligned and compliant with company macro policy and will stop end users from executing unvetted and potentially malicious macros.",
+    "QuestionSetNumber": 2,
+    "QuestionNumber": 26,
+    "QuestionCoreNumber": 8,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 27,
+        "QuestionNextCore": 9
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 27,
+        "QuestionNextCore": 9
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you block Microsoft Office macros in documents that originate from the internet?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "A web proxy server will provide granular control over the websites and web services that your end users can access. You can create fine-tuned access rules to block any inbound or outbound web requests that may be malicious or inappropriate for the workplace. The web proxy server will also introduce logging of all web activities allowing you to see usage statistics and audit end user activity.",
+    "QuestionSetNumber": 3,
+    "QuestionNumber": 27,
+    "QuestionCoreNumber": 9,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 28,
+        "QuestionNextCore": 10
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 28,
+        "QuestionNextCore": 10
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you block personal use of IT resources on corporate assets/networks?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.",
+    "QuestionSetNumber": 4,
+    "QuestionNumber": 28,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 29,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 29,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you use a web proxy to monitor and control internet usage on corporate assets/networks?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "An acceptable use policy that allows end users to utilise corporate assets and networks for personal use will introduce a number of security concerns that the organisation should be aware of. Users that are allowed personal use introduce risks by browsing to non-work-related websites, checking personal emails and attempting to download and install applications. All of these activities introduce risks the to the organisation that can be reduced by denying personal use through policy or technical means.",
+    "QuestionSetNumber": 5,
+    "QuestionNumber": 29,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 30,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 30,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you have secure and trusted methods to share files with external stakeholders?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Your organisation should determine secure methods for file sharing with external stakeholders to maintain the integrity and confidentiality of corporate data. There are many secure methods and tools available including Microsoft OneDrive for Business, Microsoft SharePoint, and Dropbox. These options provide ways of sharing that include full encryption, as well as the ability to make shared items read only and non-downloadable, thus keeping the file(s) safely stored in your own trusted locations.",
+    "QuestionSetNumber": 6,
+    "QuestionNumber": 30,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 31,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 31,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you use a spam filter to check incoming emails?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "",
+    "QuestionSetNumber": 7,
+    "QuestionNumber": 31,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 32,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 32,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you utilise an IPS or IDS system to scan all incoming files and network traffic?",
+    "QuestionDescription": "IPS stands for Intrusion Prevention System. IDS stands for Intrusion Detection System. These systems usually work in tandem with your firewall, however some firewalls have this functionality built in",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "",
+    "QuestionSetNumber": 8,
+    "QuestionNumber": 32,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 33,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 33,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "OfficeMacro",
+    "QuestionLabel": "Do you use a Cloud Access Security Broker (CASB) to monitor network traffic to Cloud services?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "",
+    "QuestionSetNumber": 9,
+    "QuestionNumber": 33,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 34,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 34,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Is Adobe Flash blocked or disabled on all browsers on devices which connect to your network?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Adobe Flash is a popular add-in for browsers that is used to play videos, games, and other interactive content. Whilst this functionality may seem useful, it does introduce a high number of security vulnerabilities, particularly if the version of Flash being used is not kept up to date - see https://www.cvedetails.com/vulnerability-list/vendor_id-53/product_id-6761/Adobe-Flash-Player.html for a full list. It is recommended to fully disable Flash unless there is a business requirement for it.",
+    "QuestionNumber": 34,
+    "QuestionCoreNumber": 10,
+    "QuestionSetNumber": 1,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 35,
+        "QuestionNextCore": 11
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 35,
+        "QuestionNextCore": 11
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Are web advertisements blocked on all browsers on devices which connect to your network?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Advertisements that appear on websites should be fully blocked to maintain high security posture within your organisation. Besides providing a distraction for staff, these web advertisements may also contain malicious code or exploits that can be automatically executed just by visiting the webpage. There are privacy concerns with web advertisements as well as they often use trackers to gather and store data relating to your browsing habits to create a profile of you which is then sold to any company that wishes to have that data.",
+    "QuestionSetNumber": 2,
+    "QuestionNumber": 35,
+    "QuestionCoreNumber": 11,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 36,
+        "QuestionNextCore": 12
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 36,
+        "QuestionNextCore": 12
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Is Java from the internet blocked on all browsers on devices which connect to your network?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Java is a software platform owned and supported by Oracle. Java applets have a history of security vulnerabilities that include downloading malicious code onto devices and gaining privilege escalation by escaping the application sandbox or by simply asking the end user for these privileges. Once this access is gained, the application is free to access files and network at will.",
+    "QuestionSetNumber": 3,
+    "QuestionNumber": 36,
+    "QuestionCoreNumber": 12,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 37,
+        "QuestionNextCore": 13
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 37,
+        "QuestionNextCore": 13
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Is Microsoft Office or equivalent software blocked from using object linking and embedding on your devices?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Object Linking and Embedding (OLE) is a useful function found in Microsoft Office that allows other files or file contents to be embedded into another document. Malicious threat actors have been leveraging this as an attack vector by embedding malicious files or code into a seemingly innocent file. When the user attempts to interact with the embedded code or file, the malicious code is then executed. The recommendation is to block OLE content to ensure your end users are protected from these threats.",
+    "QuestionSetNumber": 4,
+    "QuestionNumber": 37,
+    "QuestionCoreNumber": 13,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 38,
+        "QuestionNextCore": 14
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 38,
+        "QuestionNextCore": 14
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Is Adobe Flash blocked in Microsoft Office or equivalent software on your devices?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "MISSING",
+    "QuestionSetNumber": 5,
+    "QuestionNumber": 38,
+    "QuestionCoreNumber": 14,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 39,
+        "QuestionNextCore": 15
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 39,
+        "QuestionNextCore": 15
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Are pop-up blockers enabled on all browsers on devices which connect to your network?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Pop-ups that appear on websites should be fully blocked to maintain high security posture within your organisation. Besides providing a distraction for staff, these pop-ups may also contain malicious code or exploits that can be automatically executed just by visiting the webpage. There are privacy concerns with pop-ups as well as they often use trackers to gather and store data relating to your browsing habits to create a profile of you which is then sold to any company that wishes to have that data.",
+    "QuestionSetNumber": 6,
+    "QuestionNumber": 39,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 40,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 40,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Is your network protected by a hardware firewall that blocks suspicious web calls?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "A network firewall will monitor inbound and outbound network packets and block or allow these packets based on ruleset configurations. A firewall provides granular control over your network and can block traffic based on IP Address, Port used, or transport protocol being used. Your network firewall should be configured to block all suspicious web calls and should leverage cyber security threat intelligence to keep the rulesets up to date.",
+    "QuestionSetNumber": 7,
+    "QuestionNumber": 40,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 41,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 41,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Is your Firewall configured to prevent access by any unrecognised or uncategorised web calls?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "For the highest level of security, your network firewall should be configured to block any unrecognised or uncategorised web calls. To facilitate this, you will need to identify the IP addresses of all services you currently use and correctly group these to create rulesets. Many corporations publicly disclose this information to help organisations configure firewalls in such a way.",
+    "QuestionSetNumber": 8,
+    "QuestionNumber": 41,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 42,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 42,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Are all your software platforms and applications inventoried?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Software should be accurately inventoried to ensure that patching is appropriately performed and all configuration settings for applications and systems is kept in scope of backup operations.",
+    "QuestionSetNumber": 9,
+    "QuestionNumber": 42,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 43,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 43,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Do you log internet use on your company devices and record risky or suspicious activity?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "All web usage on corporate devices or networks should be logged so that it can appropriately audited. Keeping a record of internet usage allows you to find inappropriate or malicious web usage from employees and can be facilitated through the usage of a web application proxy. This should be configured to identify users that are attempting to access high-risk or suspicious websites and generate an alert for administrators to investigate.",
+    "QuestionSetNumber": 10,
+    "QuestionNumber": 43,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 44,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 44,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Have you implemented a software firewall on each of your devices?",
+    "QuestionDescription": "A software firewall, also known as a host-based firewall, resides on individual devices to provide an additional layer of defence against potential intrusion. Combining a software firewall with a traditional perimeter firewall provides a significant improvement in the granularity of ruleset that can be provided. Most operating systems come with a built-in software firewall that is ready to be configured.",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "",
+    "QuestionSetNumber": 11,
+    "QuestionNumber": 44,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 45,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 45,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Are your externally facing applications configured to block malicious code injection, missing or unusual page parameters?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Incorrectly configured web applications that allow reading of code statements within input fields can fall victim to many code injection attacks. The most common code injection attack is a SQL injection attack that is used against web applications that query a database to produce information. If incorrectly configured, an injection attack could trick an application into supplying more information than a user or attacker should be able to access, including allowing them exfiltrate a whole database depending on the security controls in place.",
+    "QuestionSetNumber": 12,
+    "QuestionNumber": 45,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 46,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 46,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Do you delete and clear browsing history and cached data regularly?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Clearing browser history and cached data can improve the privacy of your end users and prevent unnecessary tracking when they browse the web. Your web browser will regularly create cookies for websites you visit. Cookies provide some useful functionality but also allow websites to track who you are and what your browsing habits are. With this information, they can create a profile of a user which can then be sold to other companies.",
+    "QuestionSetNumber": 13,
+    "QuestionNumber": 46,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 47,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 47,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Hardening",
+    "QuestionLabel": "Do you have an automated process in place to delete and clear browsing history after every session?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "The process of deleting cached data and clearing browsing history should be an automated process to ensure high levels of compliance with browser data policies is maintained. Many web browsers have settings that can be configured to only store data for the current session - this should be configured and set so that end users cannot change this setting.",
+    "QuestionSetNumber": 14,
+    "QuestionNumber": 47,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 48,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 48,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Are requests for privileged access to systems, applications and data validated when first requested?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "All requests for privileged accessibility to company resources, systems and information must be explicitly approved through thorough consideration. Each time a request is put forward for privileged accessibility, the requesting user must be validated as having put through a legitimate request with legitimate intentions for the use of privileges.",
+    "QuestionNumber": 48,
+    "QuestionSetNumber": 1,
+    "QuestionCoreNumber": 15,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 49,
+        "QuestionNextCore": 16
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 49,
+        "QuestionNextCore": 16
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Are Policy security controls in place to prevent privileged users from accessing emails, browsing the web and obtaining files via online services?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "The principal of least-privilege should be implemented across privileged and administrative users, with each account only having access to exactly the applications needed to complete the roles they are assigned. Implementing controls will act as an added layer of security, as it limits access and potential damage a user can do to the system/network.",
+    "QuestionNumber": 49,
+    "QuestionSetNumber": 2,
+    "QuestionCoreNumber": 16,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 50,
+        "QuestionNextCore": 17
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 50,
+        "QuestionNextCore": 17
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Is privileged access to systems, applications and information re-validated on no longer than an annual basis?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is imperative that privileged access is reviewed as often as possible, preferably on a monthly basis. It is also important to maintain a list of privileged accounts that are monitored and adjusted as necessary, being updated as soon as there are changes in employee roles or positions.",
+    "QuestionNumber": 50,
+    "QuestionSetNumber": 3,
+    "QuestionCoreNumber": 17,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 51,
+        "QuestionNextCore": 18
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 51,
+        "QuestionNextCore": 18
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Are privileged users only given the necessary privileges and access as required by their role(s)?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Considerations should be made to exactly which programs, applications and networks each privileged user has access to. The company should consider which positions or roles in the company require access to which functionalities, and possibly blacklist non-essential functions such as e-mail access or in some cases, internet connectivity altogether. Limiting access to different functions will limit malicious users from moving laterally through company networks, devices and information.",
+    "QuestionNumber": 51,
+    "QuestionSetNumber": 4,
+    "QuestionCoreNumber": 18,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 52,
+        "QuestionNextCore": 19
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 52,
+        "QuestionNextCore": 19
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Are Technical security controls in place to prevent privileged users from accessing emails, browsing the web and obtaining files via online services?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "As administrative accounts are very powerful and have access to sensitive information and settings that are important to the organization, it is crucial that users who are granted access are carefully vetted. It is important to assess the user on a variety of characteristics, including reasons why they are to be granted access, their role(s) or position(s) in the company, and their capabilities in using the privileges proficiently to limit accidental damage.",
+    "QuestionNumber": 52,
+    "QuestionSetNumber": 5,
+    "QuestionCoreNumber": 19,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 53,
+        "QuestionNextCore": 20
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 53,
+        "QuestionNextCore": 20
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Do you employ user groups within the business to simplify the management of administrator privileges?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Deploying user groups will allow the company to implement and adjust privileges and operations assigned to MULTIPLEple users at once. This will simplify the process of assigning users with more or less privileges, easing the management of MULTIPLEple privileged accounts.",
+    "QuestionNumber": 53,
+    "QuestionSetNumber": 6,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 54
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 54
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Is there an auditing procedure for monitoring account use and/or changes to accounts?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Given the accessibility of privileged accounts to sensitive information, it is imperative to the security of the company that each privileged and administrative account is constantly monitored each time it is used, as well as the activities performed by the account(s) each time it is logged in. This is to ensure that only the necessary tasks and information are being accessed appropriately.",
+    "QuestionNumber": 54,
+    "QuestionSetNumber": 7,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 55,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 55,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Security functions are performed only by administrative staff?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Security functions must be discussed and planned prior to its implementation by administrative staff. This is to ensure absolute transparency when changes are made, and the company should consider having this action monitored closely. It is also important that all changes are logged and recorded in the event of malfunction, and to also provide accountability if something goes wrong.",
+    "QuestionNumber": 55,
+    "QuestionSetNumber": 8,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 56,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 56,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Are access permissions managed and incorporate least privilege and separation of duties?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Privileged access permissions should be regularly updated and reviewed, and the principal of least privilege should be implemented according to each role to prevent access to information and functionalities beyond the job scope of the user(s). Permissions should be actively updated when employee status and roles change, preventing unauthorized access and activity.",
+    "QuestionNumber": 56,
+    "QuestionSetNumber": 9,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 57,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 57,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Is there a session timeout for inactive admin accounts?",
+    "QuestionDescription": "i.e. User must enter credentials again after 15 minutes of inactivity",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Session timeout should be implemented for administrative and privileged accounts, automatically logging the user out preferably around the 15-minute mark, depending on the sensitivity of the data that might be exposed. Having an inactivity timer will reduce the possibility of unauthorized users accessing the elevated privileges.",
+    "QuestionNumber": 57,
+    "QuestionSetNumber": 10,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 58,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 58,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "Is there a way to identify currently signed in and connected devices to your network and systems?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Deploying services that monitor and log privileged user activity is crucial to the security of the company, as it provides an element of accountability if something goes wrong. Enabling the monitoring of which users are signed in at which time(s), as well as the applications and information accessed during those times will allow management to easily detect which user(s) were active during certain times, as well as what they were doing.",
+    "QuestionNumber": 58,
+    "QuestionSetNumber": 11,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 59,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 59,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "RestrictAdm",
+    "QuestionLabel": "The availability of your systems remain appropriate to when and where access should be made?",
+    "QuestionDescription": "i.e. Admin accounts cannot access critical systems remotely, or outside of business hours",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Prevention of remote access of privileged administrative accounts should be considered, to stop users from accessing company functionalities outside of the work environment. The organization should also consider removing access outside of business hours to further prevent unauthorized accessibility. Deploying such policies will limit the use of privileged accounts outside of the work environment, where it might be difficult to monitor and log user activity, and unauthorized use might occur.",
+    "QuestionNumber": 59,
+    "QuestionSetNumber": 12,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 60,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 60,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "When a security vulnerability is identified by a vendor or system manager as a critical risk, when is the vulnerability patched?",
+    "QuestionDescription": "It is important to consider all aspects of applying recent patches before implementing them. Ideally, the company should apply patches for the vulnerabilities as soon as they are found, however thorough testing and discussion should be done first to make a more informed decision. Where updates and patches are found to be beneficial to the security of the company, they should be applied as soon as possible to prevent malicious parties from taking advantage of vulnerabilities.",
+    "QuestionType": "RADIO",
+    "Mitigation": "",
+    "QuestionNumber": 60,
+    "QuestionSetNumber": 1,
+    "QuestionCoreNumber": 20,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Within 48 hours",
+        "QuestionNext": 61,
+        "QuestionNextCore": 21
+      },
+      {
+        "Value": "b",
+        "Label": "Within two weeks",
+        "QuestionNext": 61,
+        "QuestionNextCore": 21
+      },
+      {
+        "Value": "c",
+        "Label": "Within one month",
+        "QuestionNext": 61,
+        "QuestionNextCore": 21
+      },
+      {
+        "Value": "d",
+        "Label": "Longer than one month",
+        "QuestionNext": 61,
+        "QuestionNextCore": 21
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you replace all operating systems for workstations, servers or ICT equipment that no longer receive updates or patches from the vendor?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Operating systems on workstations and other platforms and/or devices that are no longer supported by a vendor presents several risks if they are continually being used in the organization. As time goes by, more vulnerabilities are exposed that are no longer being patched by the vendors, increasing the chance that the organization will fall victim to an attack. Therefore, a suitable replacement should be considered that actively patches its operating systems security to protect the organizations data.",
+    "QuestionNumber": 61,
+    "QuestionSetNumber": 2,
+    "QuestionCoreNumber": 21,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 62,
+        "QuestionNextCore": 22
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 62,
+        "QuestionNextCore": 22
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have an automated process that tracks and records the successful installation of patches and updates for operation systems?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Monitoring the success or failures of operating system patch installations is important to ensure issues can be addressed or new features can be implemented accordingly. Having a process that logs installation events will allow the relevant teams to see where errors might have occurred so the patch can be installed again. It is also important to record successful installation of patches, to add accountability if issues arise that can be attributed to the patch installation.",
+    "QuestionNumber": 62,
+    "QuestionSetNumber": 3,
+    "QuestionCoreNumber": 22,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 63,
+        "QuestionNextCore": 23
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 63,
+        "QuestionNextCore": 23
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Are all your software platforms, operating systems and applications inventoried?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is important that all software platforms, devices and applications are inventoried, reviewed and updated accordingly. This will also allow the security team to review the currently installed software(s) and operating systems, ensuring there are no unauthorized or unwanted operating systems are installed, as well as outdated software. This list should be actively updated each time a new update to the operating system is installed, updated or removed from the network to ensure the inventory is still relevant.",
+    "QuestionNumber": 63,
+    "QuestionSetNumber": 4,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 64
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 64
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you currently receive cyber threat intelligence from any information sharing forums or sources?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is important that the organization actively receives and reviews intelligence information from cyber threat sources that continually inform organizations of the analysis of risks associated with technology. This will ensure that the organization receives the most up-to-date information regarding technologies and operating systems that might be relevant to the company and builds a proactive environment regarding the cyber security of the company.",
+    "QuestionNumber": 64,
+    "QuestionSetNumber": 5,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 65,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 65,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have a separate development and testing environment to test software and application updates?",
+    "QuestionDescription": "This can refer to specific devices that are used for testing purposes only, and can even be used on a separate network or VLAN to your production environment",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Applications that are to be installed and/or updated into the organization network should be thoroughly tested prior to its integration. This should be done in an alternative testing environment separate from the company's actual operations environment. The testing environment should be configured to replicate the organizations actual environment, and the application can be tested to find possible flaws, vulnerabilities and/or corruptions. Having a testing environment will also protect the company’s assets.",
+    "QuestionNumber": 65,
+    "QuestionSetNumber": 6,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 66,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 66,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have change management procedure to oversee, review and approve all significant IT changes?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "All IT changes that are to be made should be carefully considered before its integration with the organizations system(s). All risks and benefits should be addressed and weighed, and all IT changes should be thoroughly tested in an external testing environment to ensure it does not compromise the organizations security. All approved or unapproved changes that are made and discussed should also be logged for future reference.",
+    "QuestionNumber": 66,
+    "QuestionSetNumber": 7,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 67,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 67,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have a rollback plan if an update or change 'breaks' a software or system?",
+    "QuestionDescription": "This can include backups of old configuration settings, being able to reinstall a previous version of an application, or snapshots of operating system builds",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "While the company should thoroughly test each application update prior to its installation, a solid rollback, or recovery plan should be designed in the case of malfunction or corruption of the system(s). A good rollback plan will allow the corrupted or ‘broken’ system to return to a functioning state to limit the damage that can occur if an update corrupts the system. The rollback plan should outline a step-by-step process that will allow the company to recover and restore the system in its entirety back to working functionality.",
+    "QuestionNumber": 67,
+    "QuestionSetNumber": 8,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 68,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 68,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you perform any form of Vulnerability Assessment or Penetration test on new systems and applications introduced to your network environment?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "All new systems, applications and patch updates should be thoroughly tested and assessed before it is integrated with the organizations current system(s). A systematic review should be completed to evaluate current known vulnerabilities of the new applications, and a thorough penetration test should also be completed in case vulnerabilities exist that are yet to be documented.",
+    "QuestionNumber": 68,
+    "QuestionSetNumber": 9,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 69,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 69,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Have you or a vendor completed assessment of operating systems installed on all workstations?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "It is important to have an in-depth, updated summary or assessment list of all the current operating systems installed across the workstations of the organization. This is part of security risk assessment and should be completed regularly to provide an insight of the possible risks that exist to the operating systems used by the company. It also provides an overview of the current versions of operating systems being used, which can be useful when implementing security functionalities.",
+    "QuestionNumber": 69,
+    "QuestionSetNumber": 10,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 70,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 70,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have a regular, scheduled security maintenance?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Scheduling security maintenance periods is an important consideration when it comes to properly maintaining the organizations systems. Having a well-structured security schedule will minimize the impacts maintenance has on the vital operations of the company. It is beneficial to the security posture of the organization that regular maintenance is performed, to prevent and identify possible faults that might occur and to optimize the performance of the operating system(s).",
+    "QuestionNumber": 70,
+    "QuestionSetNumber": 11,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 71,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 71,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have a centralised and managed distribution across workstations and server fleets for software and application updates?",
+    "QuestionDescription": "Having a centralized and managed distribution of application and operating system patches across each workstation of the organization will ease the process of updating and reviewing the status of updates across each device. It will also enable uniformity across the organization, ensuring no device is left behind in terms of patches and updates. Another added benefit is time management, as the ability to centralize updates that work across the organization will save a significant amount of time that would otherwise be spent individually updating each system.",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "",
+    "QuestionNumber": 71,
+    "QuestionSetNumber": 12,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 72,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 72,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "PatchOS",
+    "QuestionLabel": "Do you have an application (automated or not) to scan your system to identify required patches?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "The organization should deploy an application that can thoroughly scan active systems, and regularly searches for new or missing updates and patches. Having this process automated will free up time for technical staff to dedicate to other aspects of security and eliminates the possibility that an update or patch is missed.",
+    "QuestionNumber": 72,
+    "QuestionSetNumber": 13,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 73,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 73,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Does the business use Multi-Factor Authentication to authenticate all users for remote access solutions?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Multifactor authentication provides a higher level of security assurance, ensuring the integrity and confidentiality of your systems and data repositories is maintained. On-premise systems often require an employee to have a key, building pass, or be visually identified before they can physically access systems. Remote access solutions remove this verification process, meaning it is important to implement multi-factor authentication for remote access. MFA protects against password compromise by requiring a malicious threat actor to also gain access to a second authentication method - most of which are kept with the employee or are a non-static one-time passcode.",
+    "QuestionNumber": 73,
+    "QuestionSetNumber": 1,
+    "QuestionCoreNumber": 23,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 74,
+        "QuestionNextCore": 24
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 74,
+        "QuestionNextCore": 24
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Multi-factor authentication uses at least two of the following authentication factors:",
+    "QuestionDescription": "",
+    "QuestionType": "MULTIPLE",
+    "Mitigation": "",
+    "QuestionNumber": 74,
+    "QuestionSetNumber": 2,
+    "QuestionCoreNumber": 24,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Passwords",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "b",
+        "Label": "Universal 2nd Factor Security Key",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "c",
+        "Label": "Physical one-time password tokens",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "d",
+        "Label": "Biometrics",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "e",
+        "Label": "Smartcards",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "f",
+        "Label": "Mobile Application one-time password token",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "g",
+        "Label": "SMS Messages",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "h",
+        "Label": "Email",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "i",
+        "Label": "Voice Call",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      },
+      {
+        "Value": "j",
+        "Label": "Software Certificate",
+        "QuestionNext": 75,
+        "QuestionNextCore": 25
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Is MFA used to authenticate all privileged users and any other positions of trust?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Privileged and administrative user accounts require a higher level of protection due to the access levels to sensitive information and the additional system functions they are able to perform. A heavy reliance on a password-based single authentication system can leave you open to compromise through several methods that can be addressed through the use of MFA.",
+    "QuestionNumber": 75,
+    "QuestionSetNumber": 3,
+    "QuestionCoreNumber": 25,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 76,
+        "QuestionNextCore": 26
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 76,
+        "QuestionNextCore": 26
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Is MFA used to authenticate all users when accessing important data repositories?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "User accounts that are able to access important data repositories require a higher level of protection due to the sensitivity levels of the information contained within these repositories. A heavy reliance on a password-based single authentication system can leave you open to compromise through several methods that can be addressed through the use of MFA.",
+    "QuestionNumber": 76,
+    "QuestionSetNumber": 4,
+    "QuestionCoreNumber": 26,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 77,
+        "QuestionNextCore": 27
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 77,
+        "QuestionNextCore": 27
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Do you have a thorough Identity and Access Management (IAM) procedure in place?",
+    "QuestionDescription": "Are all identities and credentials issued, managed, verified, revoked and audited for all devices, users and processes?",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Appropriate Identity verification processes should be followed before issuing any organisation credentials to potential employees or contractors. Ongoing auditing and reverification of access should be regularly performed with revocation of credentials performed where necessary.",
+    "QuestionNumber": 77,
+    "QuestionSetNumber": 5,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 78,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 78,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Is physical access to assets restricted to authorised users only?",
+    "QuestionDescription": "Is physical access to assets restricted to authorised users only?",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Physical access to organisation assets should be restricted to authorised users only. This will ensure the integrity and availability of these devices is maintained by preventing tampering and compromise from outside sources.",
+    "QuestionNumber": 78,
+    "QuestionSetNumber": 6,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 79,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 79,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Do you manage remote access to assets?",
+    "QuestionDescription": "Have you considered the security implications of using remote access solutions and implemented appropriate security controls to mitigate against risks?",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Remote access solutions provide convenience but introduce a number of attack vectors for potential compromise. To ensure a high level of assurance is maintained, organisations should ensure that appropriate identification and management (IAM) is performed, along with increased security solutions for remote access solutions.",
+    "QuestionNumber": 79,
+    "QuestionSetNumber": 7,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 80,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 80,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Are access permissions managed and incorporate least privilege and separation of duties?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Access Permissions should be validated upon request and regularly audited to ensure they remain appropriate to user and their roles and responsibilities in the organisation. The principles of least privilege and separation of duties should be applied to ensure organisational integrity remains high.",
+    "QuestionNumber": 80,
+    "QuestionSetNumber": 8,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 81,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 81,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Do you provide appropriate security awareness training to all staff and personnel?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Security awareness training can increase organisational understanding of security risks and lead to improved recognition and reporting of security threats to the organisation. Improved security awareness amongst end user can reduce the risk of compromise significantly.",
+    "QuestionNumber": 81,
+    "QuestionSetNumber": 9,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 82,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 82,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Do privileged users understand their roles and responsibilities?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Privileged and administrative users should have clearly defined roles and permissions assigned to them in accordance with the position description used when hiring these staff members. The organisation should also maintain least privilege and separation of privilege for these users to maintain organisational integrity.",
+    "QuestionNumber": 82,
+    "QuestionSetNumber": 10,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 83,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 83,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Do third-party stakeholders understand their roles and responsibilities?",
+    "QuestionDescription": "Third-party stakeholders need to understand their role in the supply chain and how a compromise in their system could potentially impact and compromise your organisation. Where appropriate, you should ensure that legally binding contracts include Service Level Agreements for any services provided and identity who is liable for what in the case of a breach or compromise.",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "",
+    "QuestionNumber": 83,
+    "QuestionSetNumber": 11,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 84,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 84,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Is there a session timeout for inactive user accounts?",
+    "QuestionDescription": "i.e. Users must re-enter their credentials after a short period of inactivity",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "A session timeout for inactive user accounts will ensure the integrity and confidentiality of your corporate data is maintained. Whilst it may introduce a degree of inconvenience for end users, this security control should be introduced as a key security control within your organisation for both remote and on-premise connections to ensure that any asset or resource is adequately protected should an end user forget to logout or leave a device unlocked.",
+    "QuestionNumber": 84,
+    "QuestionSetNumber": 12,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 85,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 85,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "MFA",
+    "QuestionLabel": "Do you use a Virtual Private Network (VPN) to ensure remote connections are fully encrypted and authenticated?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": ": A Virtual Private Network (VPN) provides a secure, authenticated method for your users to connect to your corporate network from any public wired or wireless network. A VPN will provide encryption for all network traffic passed between the host and the network and can be configured to utilise corporate credentials for sign-in, with the strength of this authentication improved by utilising strong and varied MFA methods.",
+    "QuestionNumber": 85,
+    "QuestionSetNumber": 13,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 86,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 86,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "How often do you perform backups of important information, software and configuration settings?",
+    "QuestionDescription": "",
+    "QuestionType": "RADIO",
+    "Mitigation": "Having backup images of current system, software and configuration settings will allow users to revert to a stable, working system when current settings are unstable. It is important to consider the size of the data that is to be backed up, as well where it is to be stored. For smaller amounts of data, such as a single computer system for a small business, a simple external hard drive will suffice, however backing up multiple devices will most likely require a dedicated server or network attached storage (NAS) drive.",
+    "QuestionNumber": 86,
+    "QuestionSetNumber": 1,
+    "QuestionCoreNumber": 27,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "Daily",
+        "QuestionNext": 87,
+        "QuestionNextCore": 28
+      },
+      {
+        "Value": "b",
+        "Label": "Weekly",
+        "QuestionNext": 87,
+        "QuestionNextCore": 28
+      },
+      {
+        "Value": "c",
+        "Label": "Monthly",
+        "QuestionNext": 87,
+        "QuestionNextCore": 28
+      },
+      {
+        "Value": "d",
+        "Label": "More than Monthly or not at all",
+        "QuestionNext": 87,
+        "QuestionNextCore": 28
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "How long do you store backups for?",
+    "QuestionDescription": "",
+    "QuestionType": "RADIO",
+    "Mitigation": "Backups of information should be retained for at least a three-month period. Retaining working, true copies of system information and settings for an extended period will allow the company to revert to the original settings in case of emergencies and/or system failure(s). It will also be useful to have the backups where a system or network update fails, and the system becomes unstable. This timeframe may vary depending on your organisation retention policy and storage capabilities.",
+    "QuestionNumber": 87,
+    "QuestionSetNumber": 2,
+    "QuestionCoreNumber": 28,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "3 months or greater",
+        "QuestionNext": 88,
+        "QuestionNextCore": 29
+      },
+      {
+        "Value": "b",
+        "Label": "Between 1 and 3 months",
+        "QuestionNext": 88,
+        "QuestionNextCore": 29
+      },
+      {
+        "Value": "c",
+        "Label": "Less than 1 month or not at all",
+        "QuestionNext": 88,
+        "QuestionNextCore": 29
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "How often do you test partial restoration of backups?",
+    "QuestionDescription": "",
+    "QuestionType": "RADIO",
+    "Mitigation": "The integrity and functionality of your backups should be tested often to ensure that backups are not corrupted and will be usable when your organisation becomes reliant on them. A partial restoration of core data and configurations should be complete to facilitate this testing.",
+    "QuestionNumber": 88,
+    "QuestionSetNumber": 3,
+    "QuestionCoreNumber": 29,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": "a",
+        "Label": "At least quarterly",
+        "QuestionNext": 89,
+        "QuestionNextCore": 30
+      },
+      {
+        "Value": "b",
+        "Label": "At least twice a year",
+        "QuestionNext": 89,
+        "QuestionNextCore": 30
+      },
+      {
+        "Value": "c",
+        "Label": "At least annually",
+        "QuestionNext": 89,
+        "QuestionNextCore": 30
+      },
+      {
+        "Value": "d",
+        "Label": "No partial test completed",
+        "QuestionNext": 89,
+        "QuestionNextCore": 30
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Do you test full restoration of backups at least once?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Completing a restoration test is an essential component of a well-developed backup plan. A good backup is only as good as its ability to be restored, as your business may depend on the reliability of your backup systems. A full restoration from a backup should be performed at least once for every system that keeps backups, to identify any flaws in the system and address them before your organisation is becomes reliant on these backups.",
+    "QuestionNumber": 89,
+    "QuestionSetNumber": 4,
+    "QuestionCoreNumber": 30,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 90,
+        "QuestionNextCore": 31
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 90,
+        "QuestionNextCore": 31
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Do you store backups either offline, or online but in a non-rewritable and non-erasable manner?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Having data backup information stored in a manner that prevents copying and manipulation to its content will limit accidental and/or intentional erasure. Having data backed up in this format will also provide benefits to the company in the way of maintaining the integrity of time and date stamps, allowing for faster searching and retrieval of backup data.",
+    "QuestionNumber": 90,
+    "QuestionSetNumber": 5,
+    "QuestionCoreNumber": 31,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 91,
+        "QuestionNextCore": 32
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 91,
+        "QuestionNextCore": 32
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Do you test full restoration of backups each time fundamental information technology infrastructure changes occur?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Along with regular partial restorations to test functionality, a full restoration of a system should be performed following a major upgrade or change in infrastructure to ensure the usability of backups remains intact. The organisation should also test backups from old builds/infrastructure to test compatibility with the system post upgrade.",
+    "QuestionNumber": 91,
+    "QuestionSetNumber": 6,
+    "QuestionCoreNumber": 32,
+    "QuestionCore": true,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 92,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 92,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Are all of your physical devices and systems inventoried?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Maintaining an inventory of all physical devices and systems is a key aspect of keeping backups. An accurately maintained inventory will provide an overview of all devices found within your organisational network allowing you to cross check that they are all being included in scope for your backup activities.",
+    "QuestionNumber": 92,
+    "QuestionSetNumber": 7,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 93,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 93,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Are all your software platforms and applications inventoried?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Software should be accurately inventoried to ensure that patching is appropriately performed and all configuration settings for applications and systems is kept in scope of backup operations.",
+    "QuestionNumber": 93,
+    "QuestionSetNumber": 8,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 94,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 94,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Do you have an up-to-date network topology that tracks system synergies and data flows?",
+    "QuestionDescription": "A network topology diagram is a visual representation of your network that shows where your network nodes (routers/switches/modems/firewalls) sit in relation to each other",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Creating a network topology diagram will identify and provide an overview of the areas of your network that are accessible to each other and which are segregated from each other. This will also provide context for where systems, servers and services sit in the organisations network and how they interrelate - important information for troubleshooting and disaster recovery.",
+    "QuestionNumber": 94,
+    "QuestionSetNumber": 9,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 95,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 95,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Are external vendors and systems correctly identified and inventoried?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "External vendors and their employees may provide key services for your organisation; however, they also introduce a number of security concerns. It is crucial to correctly identified all vendors and their employees that perform any work with your organisation or organisational data. This identification and inventory process should also maintain a register of the access rights provided to these vendors and should be periodically re-evaluated to ensure the access remains appropriate.",
+    "QuestionNumber": 95,
+    "QuestionSetNumber": 10,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 96,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 96,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Are company assets, resources and data correctly classified by their criticality and business value?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "The criticality of all assets should be determined in the form of a ranking scale ranging from low to high. This criticality scale should be implemented into any software and hardware inventory the organisation has so that this information is available to relevant stakeholders when necessary. If a function is necessary for a critical service to be delivered, then it important for the organisation to identify this and have appropriate security measures and recovery steps in place to minimise business impact should an incident occur.",
+    "QuestionNumber": 96,
+    "QuestionSetNumber": 11,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 97,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 97,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Does your business understand it's role and place in the supply chain?",
+    "QuestionDescription": "Does your organisation understand which external organisations it is reliant on to remain at full functionality, and similarly, which external organisations are reliant on your organisation to remain at full functionality?",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Supply chain security and risk management is integral to ensuring full compliance with many cybersecurity frameworks. it is critical for the organisation to understand their place in the supply chain and how a disaster for your, or another, organisation will affect the others found within the supply chain.",
+    "QuestionNumber": 97,
+    "QuestionSetNumber": 12,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 98,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 98,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Have you performed a Business Impact Analysis (BIA) to identify potential risks and the impact from these risks?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": ": A Business Impact Analysis is a critical corporate document that forms a part of Business Continuity Planning to ensure successful recovery efforts following a disaster or major incident. A business impact analysis will identify potential threats and risks to your organisation and assess both the financial and intangible impact from these risks impacting your organisation. It is an important assessment to complete as it will help identify how much of your budget should be spent on security controls to mitigate against the identified threats.",
+    "QuestionNumber": 98,
+    "QuestionSetNumber": 13,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": 99,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": 99,
+        "QuestionNextCore": null
+      }
+    ]
+  },
+  {
+    "QuestionCategory": "Backups",
+    "QuestionLabel": "Are audit logs implemented for key systems?",
+    "QuestionDescription": "",
+    "QuestionType": "BOOLEAN",
+    "Mitigation": "Audit logs ensure system integrity is maintained by providing evidence of events occurring. Typical event logs should include details such as the user performing an action, the object being actioned against, the date and time an event/action occurred, the IP address it has occurred from, and any other system specific details.",
+    "QuestionNumber": 99,
+    "QuestionSetNumber": 14,
+    "QuestionCore": false,
+    "Answers": [
+      {
+        "Value": true,
+        "Label": "Yes",
+        "QuestionNext": null,
+        "QuestionNextCore": null
+      },
+      {
+        "Value": false,
+        "Label": "No",
+        "QuestionNext": null,
+        "QuestionNextCore": null
+      }
+    ]
+  }
+]

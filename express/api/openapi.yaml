@@ -1,0 +1,1246 @@
+---
+openapi: 3.0.3
+info:
+  title: SecureBiz mitigration strategy maturity level evaluation API
+  description: This is the SecureBiz mitigration strategy maturity level evaluation API.
+  contact:
+    name: SecureBiz API Team
+    email: shijiel@deakin.edu.au
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 3.2.2
+servers:
+- url: https://virtserver.swaggerhub.com/jaslian/asd-essential-8/2.2.0
+  description: SwaggerHub API Auto Mocking
+- url: http://localhost/api/2.2.0
+  description: Local server
+- url: https://www.securebizapp.com/api/2.2.0
+  description: Production server
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: public
+  description: Operations available to anonymous visitor
+paths:
+  /categories:
+    get:
+      tags:
+      - public
+      summary: Get all categories
+      description: Get all categories
+      operationId: getAllQuestionCategories
+      parameters:
+      - name: QuestionCategory
+        in: query
+        description: If QuestionCategory is present, return only specified category.
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: return all question categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/category'
+        "400":
+          description: bad input
+        "404":
+          description: not found
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getAllQuestionCategories
+      x-eov-operation-handler: routes/getAllQuestionCategories
+  /category:
+    post:
+      tags:
+      - admins
+      summary: Add a category
+      description: Add a category
+      operationId: addQuestionCategory
+      requestBody:
+        description: category to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/category'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: addQuestionCategory
+      x-eov-operation-handler: routes/addQuestionCategory
+  /category/{id}:
+    get:
+      tags:
+      - public
+      summary: Get a category and its questions
+      description: Get a category and its questions, the path param {id} is db collection's system _id.
+      operationId: getQuestionCategory
+      parameters:
+      - name: id
+        in: path
+        description: Category's collection ID _id.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          pattern: ^[0-9a-fA-F]{24}$
+          type: string
+      responses:
+        "200":
+          description: get one category object as result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/category'
+              examples:
+                example-1:
+                  value:
+                    _id: 5e91913acaa2ff00a799dac1
+                    QuestionCategory: Application control is used for evaluating bla bla bla
+                    CodeName: string
+                    Title: The name of the category.
+                    IsVisible: true
+                    Tooltip: string
+                    Slug: string
+                    Desc: string
+                    DetailedDesc: string
+                    Expressions:
+                    - Operator: AND
+                      Rules:
+                      - null
+                      Level: 0
+                      Override: true
+                    Questions:
+                    - _id: 5fd4eb35aff4d46d146b4d8b
+                      QuestionCategory: Patch Applications
+                      QuestionLabel: Do you categorize organisation software and systems based on criticality?
+                      QuestionDescription: <h1>Question Text</h1>
+                      QuestionType: BOOLEAN
+                      Mitigation: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+                      QuestionSetNumber: 2
+                      QuestionNumber: 2
+                      QuestionCore: true
+                      QuestionCoreNumber: 0
+                      Validators: Yup.string().oneOf(['a','b','c']).required('Required')
+                      Answers:
+                      - Value: string
+                        Text: string
+                        QuestionNext: 0
+                        QuestionNextCore: 0
+                example-2:
+                  value:
+                    _id: 5e91913acaa2ff00a799dac1
+                    QuestionCategory: Application control is used for evaluating bla bla bla
+                    CodeName: string
+                    Title: The name of the category.
+                    IsVisible: true
+                    Tooltip: string
+                    Slug: string
+                    Desc: string
+                    DetailedDesc: string
+                    Expressions:
+                    - Operator: AND
+                      Rules:
+                      - null
+                      Level: 0
+                      Override: true
+                    Questions:
+                    - _id: 5fd4eb35aff4d46d146b4d8b
+                      QuestionCategory: Patch Applications
+                      QuestionLabel: Do you categorize organisation software and systems based on criticality?
+                      QuestionDescription: <h1>Question Text</h1>
+                      QuestionType: BOOLEAN
+                      Mitigation: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+                      QuestionSetNumber: 2
+                      QuestionNumber: 2
+                      QuestionCore: true
+                      QuestionCoreNumber: 0
+                      Validators: Yup.string().oneOf(['a','b','c']).required('Required')
+                      Answers:
+                      - Value: string
+                        Text: string
+                        QuestionNext: 0
+                        QuestionNextCore: 0
+        "400":
+          description: bad input parameter
+        "404":
+          description: not found
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getQuestionCategory
+      x-eov-operation-handler: routes/getQuestionCategory
+    delete:
+      tags:
+      - admins
+      summary: Delete a question category
+      description: Delete a question category, the path param {id} is db collection's system _id.
+      operationId: deleteQuestionCategory
+      parameters:
+      - name: id
+        in: path
+        description: Category's collection ID _id.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          pattern: ^[0-9a-fA-F]{24}$
+          type: string
+      responses:
+        "200":
+          description: item deleted
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: deleteQuestionCategory
+      x-eov-operation-handler: routes/deleteQuestionCategory
+    patch:
+      tags:
+      - admins
+      summary: update a question category
+      description: Add a question category, the path param {id} is db collection's system _id.
+      operationId: updateQuestionCategory
+      parameters:
+      - name: id
+        in: path
+        description: Category's collection ID _id.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          pattern: ^[0-9a-fA-F]{24}$
+          type: string
+      requestBody:
+        description: item to update
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/category'
+      responses:
+        "200":
+          description: item updated
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: updateQuestionCategory
+      x-eov-operation-handler: routes/updateQuestionCategory
+  /category/{id}/result:
+    post:
+      tags:
+      - public
+      summary: Query for the Mitigation Maturity level
+      description: Query for the Mitigation Maturity level
+      operationId: queryQuestionCategoryResult
+      parameters:
+      - name: id
+        in: path
+        description: Category's ObjectId _Id.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Query for the Mitigation Maturity level
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/answersheet'
+            examples:
+              example-1:
+                value:
+                  Questions:
+                  - _id: 5fd4eb35aff4d46d146b4d8b
+                    QuestionCategory: Patch Applications
+                    QuestionLabel: Do you categorize organisation software and systems based on criticality?
+                    QuestionDescription: <h1>Question Text</h1>
+                    QuestionType: BOOLEAN
+                    Mitigation: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+                    QuestionSetNumber: 2
+                    QuestionNumber: 2
+                    QuestionCore: true
+                    QuestionCoreNumber: 0
+                    Validators: Yup.string().oneOf(['a','b','c']).required('Required')
+                    Answers:
+                    - Value: string
+                      Text: string
+                      QuestionNext: 0
+                      QuestionNextCore: 0
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+      responses:
+        "200":
+          description: Mitigation maturity level
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                example-1:
+                  value:
+                    level: 0
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: queryQuestionCategoryResult
+      x-eov-operation-handler: routes/queryQuestionCategoryResult
+  /category/result/pdf:
+    post:
+      tags:
+      - public
+      summary: Get the binary PDF file
+      description: Get the binary PDF file
+      operationId: generatePdfReport
+      requestBody:
+        description: Request body include an object that has answered questionnaire and the maturity level
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body'
+      responses:
+        "201":
+          description: A PDF binary string
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+              examples: {}
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: generatePdfReport
+      x-eov-operation-handler: routes/generatePdfReport
+  /login:
+    post:
+      tags:
+      - admins
+      summary: admin login
+      description: adminlogin
+      operationId: adminlogin
+      requestBody:
+        description: adminlogin
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/adminlogin'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: adminlogin
+      x-eov-operation-handler: routes/adminlogin
+  /vertifytoken:
+    post:
+      tags:
+      - admins
+      summary: vertifytoken oken
+      description: vertifytoken
+      operationId: vertifytoken
+      requestBody:
+        description: vertifytoken
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/adminlogin'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: vertifytoken
+      x-eov-operation-handler: routes/vertifytoken
+  /questions:
+    get:
+      tags:
+      - public
+      summary: Get all questions
+      description: Get all questions
+      operationId: getAllQuestions
+      responses:
+        "200":
+          description: Get all questions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/question'
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getAllQuestions
+      x-eov-operation-handler: routes/getAllQuestions
+    post:
+      tags:
+      - public
+      description: Get questions based on QuestionCategory and/or QuestionCore query
+      operationId: getCategoryQuestions
+      requestBody:
+        description: Request body is an object congtains QuestionCategory string value
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body_1'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/question'
+        "400":
+          description: Bad Request
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getCategoryQuestions
+      x-eov-operation-handler: routes/getCategoryQuestions
+  /question:
+    post:
+      tags:
+      - admins
+      summary: Create a question
+      description: Create a question
+      operationId: addQuestion
+      requestBody:
+        description: question to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/question'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: addQuestion
+      x-eov-operation-handler: routes/addQuestion
+  /update-question:
+    post:
+      tags:
+      - admins
+      summary: Update a question
+      description: updateQuestion
+      operationId: updateQuestion
+      requestBody:
+        description: question to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/question'
+      responses:
+        "201":
+          description: item created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: an existing item already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: updateQuestion
+      x-eov-operation-handler: routes/updateQuestion
+  /question/{QuestionNumber}:
+    get:
+      tags:
+      - public
+      summary: Get a question
+      description: Get a question by querying QuestionNumber, the param id is the QuestionNumber
+      operationId: getQuestion
+      parameters:
+      - name: QuestionNumber
+        in: path
+        description: Find question with the QuestionNumber.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: get one question
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/question'
+        "400":
+          description: bad input parameter
+        "404":
+          description: not found
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getQuestion
+      x-eov-operation-handler: routes/getQuestion
+    delete:
+      tags:
+      - admins
+      summary: Delete a question
+      description: Delete a question
+      operationId: deleteQuestion
+      parameters:
+      - name: QuestionNumber
+        in: path
+        description: Find question with the QuestionNumber.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: question deleted
+        "400":
+          description: bad input parameter
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: deleteQuestion
+      x-eov-operation-handler: routes/deleteQuestion
+    patch:
+      tags:
+      - admins
+      summary: Update a question
+      description: Update a question
+      operationId: updateQuestiontwo
+      parameters:
+      - name: QuestionNumber
+        in: path
+        description: Find question with the QuestionNumber.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      requestBody:
+        description: question to update
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/question'
+      responses:
+        "200":
+          description: item updated
+        "400":
+          description: bad input parameter
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: updateQuestion
+      x-eov-operation-handler: routes/updateQuestion
+  /users:
+    get:
+      tags:
+      - admins
+      summary: Get all users
+      description: Get all users
+      operationId: getAllUser
+      responses:
+        "200":
+          description: return all results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/user'
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getAllUser
+      x-eov-operation-handler: routes/getAllUser
+  /get-stats:
+    post:
+      tags:
+      - admins
+      summary: Get all stats
+      description: Get all users
+      operationId: getStats
+      responses:
+        "200":
+          description: return all getStats results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/user'
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getStats
+      x-eov-operation-handler: routes/getStats
+  /user:
+    post:
+      tags:
+      - public
+      summary: Add an user
+      description: Add an user
+      operationId: addUser
+      requestBody:
+        description: user to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+      responses:
+        "201":
+          description: user created
+        "400":
+          description: invalid input, object invalid
+        "409":
+          description: the user already exists
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: addUser
+      x-eov-operation-handler: routes/addUser
+  /user/{id}:
+    get:
+      tags:
+      - public
+      summary: Get an user
+      description: Get one user
+      operationId: getUser
+      parameters:
+      - name: id
+        in: path
+        description: ID of user to return
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: user found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user'
+              examples:
+                example-1:
+                  value:
+                    id: 5cfefea79ef248c5b72e778ea7e884c8
+                    firstName: John
+                    lastName: Citizen
+                    email: user@example.com
+                    organisation: SecureBiz
+        "400":
+          description: invalid input, object invalid
+        "404":
+          description: not found
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getUser
+      x-eov-operation-handler: routes/getUser
+    delete:
+      tags:
+      - admins
+      summary: Delete an user
+      description: Delete an user
+      operationId: deleteUser
+      parameters:
+      - name: id
+        in: path
+        description: ID of user to delete
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: user deleted
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: deleteUser
+      x-eov-operation-handler: routes/deleteUser
+    patch:
+      tags:
+      - admins
+      summary: Update an user
+      description: Update an user
+      operationId: updateUser
+      parameters:
+      - name: id
+        in: path
+        description: ID of user to patch
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        description: Update an user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+      responses:
+        "200":
+          description: item updated
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: updateUser
+      x-eov-operation-handler: routes/updateUser
+  /feedback-list:
+    post:
+      tags:
+      - public
+      summary: Get all feedback
+      description: Get a list of feedback
+      operationId: getAllFeedback
+      responses:
+        "200":
+          description: get all feedback
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getAllFeedback
+      x-eov-operation-handler: routes/getAllFeedback
+  /feedback:
+    post:
+      tags:
+      - public
+      summary: Add feedback
+      description: Add feedback
+      operationId: addFeedback
+      requestBody:
+        description: feedback to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/feedback'
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+      responses:
+        "201":
+          description: feedback added
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: addFeedback
+      x-eov-operation-handler: routes/addFeedback
+  /feedback/{id}:
+    get:
+      tags:
+      - public
+      summary: Get a feedback
+      description: Get a feedback
+      operationId: getFeedback
+      parameters:
+      - name: id
+        in: path
+        description: ID of the feedback to return
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: get one feedback
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/feedback'
+        "400":
+          description: invalid input, object invalid
+        "404":
+          description: not found
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: getFeedback
+      x-eov-operation-handler: routes/getFeedback
+    delete:
+      tags:
+      - admins
+      summary: delete a feedback
+      description: Delete a feedback
+      operationId: deleteFeedback
+      parameters:
+      - name: id
+        in: path
+        description: ID of the feedback to delete
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: feedback deleted
+        "400":
+          description: invalid input, object invalid
+        "404":
+          description: not found
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: deleteFeedback
+      x-eov-operation-handler: routes/deleteFeedback
+  /category/core-result:
+    post:
+      tags:
+      - public
+      description: Query for the Mitigation Maturity level for core questions
+      operationId: postCategoryCoreResult
+      parameters: []
+      requestBody:
+        description: Query for the Mitigation Maturity level for core questions
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/answersheet'
+      responses:
+        "200":
+          description: Mitigation maturity level
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/maturityresult'
+        "400":
+          description: invalid input, object invalid
+        "500":
+          description: Internal Server Error
+      x-eov-operation-id: postCategoryCoreResult
+      x-eov-operation-handler: routes/postCategoryCoreResult
+components:
+  schemas:
+    category:
+      title: Category
+      required:
+      - QuestionCategory
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Id of the category.
+          example: 5e91913acaa2ff00a799dac1
+        QuestionCategory:
+          type: string
+          description: This links questions to categories.
+          example: Application control is used for evaluating bla bla bla
+        CodeName:
+          type: string
+        Title:
+          type: string
+          example: The name of the category.
+        IsVisible:
+          type: boolean
+          description: This category is visible or hiddend.
+        Tooltip:
+          type: string
+        Slug:
+          type: string
+          description: URL slug for the category.
+        Desc:
+          type: string
+        DetailedDesc:
+          type: string
+          description: Long description, this should support RAW HTML.
+        Expressions:
+          type: array
+          description: The rules used for calculating the maturity level.
+          items:
+            $ref: '#/components/schemas/expression'
+        Questions:
+          type: array
+          items:
+            $ref: '#/components/schemas/question'
+      description: A strategy category contains a set of questions, this is called questionnaire for most of the specs.
+      x-examples:
+        example-1:
+          _id: 5e91913acaa2ff00a799dac1
+          QuestionCategory: Application control is used for evaluating bla bla bla
+          CodeName: string
+          Title: The name of the category.
+          IsVisible: true
+          Tooltip: string
+          Slug: string
+          Desc: string
+          DetailedDesc: string
+          Expressions:
+          - Operator: AND
+            Rules:
+            - null
+            Level: 0
+            Override: true
+          Questions:
+          - _id: 5fd4eb35aff4d46d146b4d8b
+            QuestionCategory: Patch Applications
+            QuestionLabel: Do you categorize organisation software and systems based on criticality?
+            QuestionDescription: <h1>Question Text</h1>
+            QuestionType: BOOLEAN
+            Mitigation: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+            QuestionSetNumber: 2
+            QuestionNumber: 2
+            QuestionCore: true
+            QuestionCoreNumber: 0
+            Validators: Yup.string().oneOf(['a','b','c']).required('Required')
+            Answers:
+            - Value: string
+              Text: string
+              QuestionNext: 0
+              QuestionNextCore: 0
+        example-2:
+          _id: 5e91913acaa2ff00a799dac1
+          QuestionCategory: Application control is used for evaluating bla bla bla
+          CodeName: string
+          Title: The name of the category.
+          IsVisible: true
+          Tooltip: string
+          Slug: string
+          Desc: string
+          DetailedDesc: string
+          Expressions:
+          - Operator: AND
+            Rules:
+            - null
+            Level: 0
+            Override: true
+          Questions:
+          - _id: 5fd4eb35aff4d46d146b4d8b
+            QuestionCategory: Patch Applications
+            QuestionLabel: Do you categorize organisation software and systems based on criticality?
+            QuestionDescription: <h1>Question Text</h1>
+            QuestionType: BOOLEAN
+            Mitigation: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+            QuestionSetNumber: 2
+            QuestionNumber: 2
+            QuestionCore: true
+            QuestionCoreNumber: 0
+            Validators: Yup.string().oneOf(['a','b','c']).required('Required')
+            Answers:
+            - Value: string
+              Text: string
+              QuestionNext: 0
+              QuestionNextCore: 0
+    answersheet:
+      title: Answered Questionnaire
+      type: object
+      properties:
+        Questions:
+          type: array
+          description: The questions with the selected answer.
+          items:
+            $ref: '#/components/schemas/question'
+      description: Answered Questionnaire, basically it's a copy of the original questionnaire with an array of answers that are selected.
+    question:
+      title: Question
+      required:
+      - QuestionCore
+      type: object
+      properties:
+        _id:
+          type: string
+          description: The unique ID of the question.
+          example: 5fd4eb35aff4d46d146b4d8b
+        QuestionCategory:
+          type: string
+          description: Question category, this should match what's in category.
+          example: Patch Applications
+        QuestionLabel:
+          type: string
+          description: The label used as in HTML input field's label.
+          example: Do you categorize organisation software and systems based on criticality?
+        QuestionDescription:
+          type: string
+          description: The question's text, allows RAW HTML.
+          example: <h1>Question Text</h1>
+        QuestionType:
+          type: string
+          description: The form field type.
+          example: BOOLEAN
+          enum:
+          - TEXT
+          - MULTIPLE
+          - SELECT
+          - TEXTAREA
+          - BOOLEAN
+          - RADIO
+        Mitigation:
+          type: string
+          description: Mitigation long description.
+          example: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+        QuestionSetNumber:
+          type: integer
+          description: The question number as in the category. This is different than the question number.
+          example: 2
+        QuestionNumber:
+          type: integer
+          description: Question number
+          example: 2
+        QuestionCore:
+          type: boolean
+          description: Is this question a core qustion?
+        QuestionCoreNumber:
+          type: integer
+          description: Question number for core questions. Can be null if it's non-core question.
+          nullable: true
+        Validators:
+          type: string
+          description: The string validation rules.
+          example: Yup.string().oneOf(['a','b','c']).required('Required')
+        Answers:
+          type: array
+          description: Possible answers of the question.
+          items:
+            $ref: '#/components/schemas/answer'
+      description: Basic element of a mitigation strategy questionnaire, question has an array property contains possible answers.
+      x-examples:
+        example-1:
+          _id: 5fd4eb35aff4d46d146b4d8b
+          QuestionCategory: Patch Applications
+          QuestionLabel: Do you categorize organisation software and systems based on criticality?
+          QuestionDescription: <h1>Question Text</h1>
+          QuestionType: BOOLEAN
+          Mitigation: Having the organizations software and systems organized based on their importance and criticality to the organization will add priority to the process of application patching, where software and systems that are considered more important will have precedence over those considered to be of lesser importance. It will also provide the company with a prioritized list of systems and software that can be reviewed and checked for functionality in the event of a network crash or reboot.
+          QuestionSetNumber: 2
+          QuestionNumber: 2
+          QuestionCore: true
+          QuestionCoreNumber: 3
+          Validators: Yup.string().oneOf(['a','b','c']).required('Required')
+          Answers:
+          - Text: string
+            QuestionNext: 2
+            QuestionNextCore: 2
+    answer:
+      title: Available Answers of a question
+      required:
+      - Value
+      type: object
+      properties:
+        Value:
+          description: The value of the option.
+          anyOf:
+          - type: string
+          - type: integer
+        Label:
+          type: string
+          description: The text showing in the front-end for this option.
+        QuestionNext:
+          type: integer
+          description: The next question's number if this answer is selected.
+          nullable: true
+        QuestionNextCore:
+          type: integer
+          description: The next core question's number if this answer is selected.
+          nullable: true
+      description: Available Answer of a question
+      x-examples:
+        example-1:
+          Value: false
+          Text: "No"
+          QuestionNext: 2
+          QuestionNextCore: 2
+        example-2:
+          Value: true
+          Text: "Yes"
+          QuestionNext: 2
+          QuestionNextCore: 2
+        example-3:
+          Value: a
+          Text: Within 48 hours
+          QuestionNext: 61
+          QuestionNextCore: 61
+        example-4:
+          Value: b
+          Text: Within two weeks
+          QuestionNext: 62
+          QuestionNextCore: 62
+    user:
+      title: User
+      required:
+      - email
+      type: object
+      properties:
+        id:
+          type: string
+          example: 5cfefea79ef248c5b73e278ea7e884c8
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: Citizen
+        email:
+          type: string
+          format: email
+        organisation:
+          type: string
+          example: SecureBiz
+        isAdmin:
+          type: boolean
+        password:
+          type: string
+      description: Basic user
+    feedback:
+      title: Feedback
+      required:
+      - content
+      - email
+      - name
+      type: object
+      properties:
+        _id:
+          type: string
+          example: 879330c05ba248f598bc5876dda00ace
+        name:
+          type: string
+          example: John
+        phone:
+          type: string
+          example: Citizen
+        email:
+          type: string
+          format: email
+        content:
+          type: string
+          example: The feedback content bla bla bla
+      description: Anonymous feeback
+      x-examples:
+        example-1:
+          id: 879330c05ba248f598bc5876dda00ace
+          name: John
+          phone: Citizen
+          email: user@example.com
+          content: The feedback content bla bla bla
+    expression:
+      title: Expression
+      type: object
+      properties:
+        Operator:
+          type: string
+          description: The operator is used to combine multiple validation rules.
+          enum:
+          - AND
+          - OR
+          - ANYIN
+          - ALLIN
+          - IN
+        Rules:
+          type: array
+          description: The rules are the conditions to be evaluated against the submitted result. It should be combined using the operator.
+          items: {}
+        Level:
+          type: integer
+          description: The result level associated by the rules.
+        Override:
+          type: boolean
+          description: The priority of the expression, if override is true, the combined rules will result in returning the level specified, with all the other competing expressions ignored.
+    maturityresult:
+      title: maturityresult
+      type: object
+      properties:
+        Level:
+          type: integer
+          description: The maturity level calculated.
+        QuestionCategory:
+          type: string
+          description: The question category the maturity level is calculated against.
+      description: The schema holds the maturity calculation result.
+      x-examples:
+        example-1:
+          Level: 0
+          QuestionCategory: string
+    adminlogin:
+      title: Admin Login
+      required:
+      - email
+      - password
+      type: object
+      properties:
+        email:
+          type: string
+          example: john@gmail.com
+        password:
+          type: string
+          example: "123456"
+      description: adminlogin
+      x-examples:
+        example-1:
+          email: john@gmail.com
+          password: 123456
+    inline_response_200:
+      type: object
+      properties:
+        level:
+          type: integer
+          description: The mitigration level score
+    body:
+      type: object
+      properties:
+        answers:
+          $ref: '#/components/schemas/answersheet'
+        level:
+          type: integer
+    body_1:
+      type: object
+      properties:
+        QuestionCategory:
+          type: string
+        QuestionCore:
+          type: boolean
+    inline_response_200_1:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: Total number of feedback found.
+        feedback:
+          type: array
+          description: all feedback
+          items:
+            $ref: '#/components/schemas/feedback'
